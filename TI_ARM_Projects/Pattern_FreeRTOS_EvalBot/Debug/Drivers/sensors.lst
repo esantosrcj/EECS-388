@@ -1,0 +1,1802 @@
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                             PC v5.0.4 *
+       3                    ;* Date/Time created: Sat Aug 03 12:01:35 2013                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=on --code_state=16 --disable_dual_state --e
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Drivers/sensors.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v5.0.4 Copyright (c) 1996-2013 Te
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Projects\TI_ARM_Projects\FreeRTOS_EvalBot\Debug")
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_SysCtlPeripheralEnable")
+      15                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("ROM_SysCtlPeripheralEnable")
+      16                            .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$10)
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("../Drivers/sensors.c")
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x61)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x05)
+      22                    
+      23                    $C$DW$2 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinTypeGPIOInput")
+      24                            .dwattr $C$DW$2, DW_AT_TI_symbol_name("ROM_GPIOPinTypeGPIOInput")
+      25                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$10)
+      26                            .dwattr $C$DW$2, DW_AT_declaration
+      27                            .dwattr $C$DW$2, DW_AT_external
+      28                            .dwattr $C$DW$2, DW_AT_decl_file("../Drivers/sensors.c")
+      29                            .dwattr $C$DW$2, DW_AT_decl_line(0x66)
+      30                            .dwattr $C$DW$2, DW_AT_decl_column(0x05)
+      31                    
+      32                    $C$DW$3 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPadConfigSet")
+      33                            .dwattr $C$DW$3, DW_AT_TI_symbol_name("ROM_GPIOPadConfigSet")
+      34                            .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$10)
+      35                            .dwattr $C$DW$3, DW_AT_declaration
+      36                            .dwattr $C$DW$3, DW_AT_external
+      37                            .dwattr $C$DW$3, DW_AT_decl_file("../Drivers/sensors.c")
+      38                            .dwattr $C$DW$3, DW_AT_decl_line(0x67)
+      39                            .dwattr $C$DW$3, DW_AT_decl_column(0x05)
+      40                    
+      41                    $C$DW$4 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinRead")
+      42                            .dwattr $C$DW$4, DW_AT_TI_symbol_name("ROM_GPIOPinRead")
+      43                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$10)
+      44                            .dwattr $C$DW$4, DW_AT_declaration
+      45                            .dwattr $C$DW$4, DW_AT_external
+      46                            .dwattr $C$DW$4, DW_AT_decl_file("../Drivers/sensors.c")
+      47                            .dwattr $C$DW$4, DW_AT_decl_line(0x86)
+      48                            .dwattr $C$DW$4, DW_AT_decl_column(0x16)
+      49                    
+      50                    $C$DW$5 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinTypeGPIOOutput")
+      51                            .dwattr $C$DW$5, DW_AT_TI_symbol_name("ROM_GPIOPinTypeGPIOOutput")
+      52                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$10)
+      53                            .dwattr $C$DW$5, DW_AT_declaration
+      54                            .dwattr $C$DW$5, DW_AT_external
+      55                            .dwattr $C$DW$5, DW_AT_decl_file("../Drivers/sensors.c")
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    2
+
+      56                            .dwattr $C$DW$5, DW_AT_decl_line(0x137)
+      57                            .dwattr $C$DW$5, DW_AT_decl_column(0x05)
+      58                    
+      59                    $C$DW$6 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinWrite")
+      60                            .dwattr $C$DW$6, DW_AT_TI_symbol_name("ROM_GPIOPinWrite")
+      61                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$10)
+      62                            .dwattr $C$DW$6, DW_AT_declaration
+      63                            .dwattr $C$DW$6, DW_AT_external
+      64                            .dwattr $C$DW$6, DW_AT_decl_file("../Drivers/sensors.c")
+      65                            .dwattr $C$DW$6, DW_AT_decl_line(0x13a)
+      66                            .dwattr $C$DW$6, DW_AT_decl_column(0x05)
+      67                    
+      68                    $C$DW$7 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinIntDisable")
+      69                            .dwattr $C$DW$7, DW_AT_TI_symbol_name("ROM_GPIOPinIntDisable")
+      70                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$10)
+      71                            .dwattr $C$DW$7, DW_AT_declaration
+      72                            .dwattr $C$DW$7, DW_AT_external
+      73                            .dwattr $C$DW$7, DW_AT_decl_file("../Drivers/sensors.c")
+      74                            .dwattr $C$DW$7, DW_AT_decl_line(0x140)
+      75                            .dwattr $C$DW$7, DW_AT_decl_column(0x05)
+      76                    
+      77                    $C$DW$8 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOIntTypeSet")
+      78                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("ROM_GPIOIntTypeSet")
+      79                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$10)
+      80                            .dwattr $C$DW$8, DW_AT_declaration
+      81                            .dwattr $C$DW$8, DW_AT_external
+      82                            .dwattr $C$DW$8, DW_AT_decl_file("../Drivers/sensors.c")
+      83                            .dwattr $C$DW$8, DW_AT_decl_line(0x143)
+      84                            .dwattr $C$DW$8, DW_AT_decl_column(0x05)
+      85                    
+      86                    $C$DW$9 .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_IntEnable")
+      87                            .dwattr $C$DW$9, DW_AT_TI_symbol_name("ROM_IntEnable")
+      88                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$10)
+      89                            .dwattr $C$DW$9, DW_AT_declaration
+      90                            .dwattr $C$DW$9, DW_AT_external
+      91                            .dwattr $C$DW$9, DW_AT_decl_file("../Drivers/sensors.c")
+      92                            .dwattr $C$DW$9, DW_AT_decl_line(0x14c)
+      93                            .dwattr $C$DW$9, DW_AT_decl_column(0x05)
+      94                    
+      95                    $C$DW$10        .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinIntClear")
+      96                            .dwattr $C$DW$10, DW_AT_TI_symbol_name("ROM_GPIOPinIntClear")
+      97                            .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$10)
+      98                            .dwattr $C$DW$10, DW_AT_declaration
+      99                            .dwattr $C$DW$10, DW_AT_external
+     100                            .dwattr $C$DW$10, DW_AT_decl_file("../Drivers/sensors.c")
+     101                            .dwattr $C$DW$10, DW_AT_decl_line(0x199)
+     102                            .dwattr $C$DW$10, DW_AT_decl_column(0x09)
+     103                    
+     104                    $C$DW$11        .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinIntEnable")
+     105                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("ROM_GPIOPinIntEnable")
+     106                            .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$10)
+     107                            .dwattr $C$DW$11, DW_AT_declaration
+     108                            .dwattr $C$DW$11, DW_AT_external
+     109                            .dwattr $C$DW$11, DW_AT_decl_file("../Drivers/sensors.c")
+     110                            .dwattr $C$DW$11, DW_AT_decl_line(0x19a)
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    3
+
+     111                            .dwattr $C$DW$11, DW_AT_decl_column(0x09)
+     112                    
+     113                    $C$DW$12        .dwtag  DW_TAG_subprogram, DW_AT_name("ROM_GPIOPinIntStatus")
+     114                            .dwattr $C$DW$12, DW_AT_TI_symbol_name("ROM_GPIOPinIntStatus")
+     115                            .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$10)
+     116                            .dwattr $C$DW$12, DW_AT_declaration
+     117                            .dwattr $C$DW$12, DW_AT_external
+     118                            .dwattr $C$DW$12, DW_AT_decl_file("../Drivers/sensors.c")
+     119                            .dwattr $C$DW$12, DW_AT_decl_line(0x1e3)
+     120                            .dwattr $C$DW$12, DW_AT_decl_column(0x10)
+     121 00000000                   .bss    g_pfnWheelCallback,4,4
+     122                    $C$DW$13        .dwtag  DW_TAG_variable, DW_AT_name("g_pfnWheelCallback")
+     123                            .dwattr $C$DW$13, DW_AT_TI_symbol_name("g_pfnWheelCallback")
+     124                            .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$25)
+     125                            .dwattr $C$DW$13, DW_AT_location[DW_OP_addr g_pfnWheelCallback]
+     126                            .dwattr $C$DW$13, DW_AT_decl_file("../Drivers/sensors.c")
+     127                            .dwattr $C$DW$13, DW_AT_decl_line(0x48)
+     128                            .dwattr $C$DW$13, DW_AT_decl_column(0x0f)
+     129 00000000                   .data
+     130                            .align  1
+     131                            .elfsym g_ucDebouncedBumpers,SYM_SIZE(1)
+     132 00000000           g_ucDebouncedBumpers:
+     133 00000000 00000003          .field  3,8                     ; g_ucDebouncedBumpers @ 0
+     134                    
+     135                    $C$DW$14        .dwtag  DW_TAG_variable, DW_AT_name("g_ucDebouncedBumpers")
+     136                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("g_ucDebouncedBumpers")
+     137                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$6)
+     138                            .dwattr $C$DW$14, DW_AT_location[DW_OP_addr g_ucDebouncedBumpers]
+     139                            .dwattr $C$DW$14, DW_AT_decl_file("../Drivers/sensors.c")
+     140                            .dwattr $C$DW$14, DW_AT_decl_line(0x4f)
+     141                            .dwattr $C$DW$14, DW_AT_decl_column(0x16)
+     142 00000001                   .data
+     143                            .align  1
+     144                            .elfsym ucBumperClockA$1,SYM_SIZE(1)
+     145 00000001           ucBumperClockA$1:
+     146 00000000 00000003          .field  0,8                     ; ucBumperClockA$1 @ 0
+     147                    
+     148 00000002                   .data
+     149                            .align  1
+     150                            .elfsym ucBumperClockB$2,SYM_SIZE(1)
+     151 00000002           ucBumperClockB$2:
+     152 00000000 00000003          .field  0,8                     ; ucBumperClockB$2 @ 0
+     153                    
+     154                    ;       C:\Tools\TI_CodeComposer\ccsv5\tools\compiler\arm_5.0.4\bin\armacpia.exe -@C:\\Users\\gminden\
+     155 00000000                   .sect   ".text"
+     156                            .clink
+     157                            .thumbfunc BumpSensorsInit
+     158 00000000                   .thumb
+     159                            .global BumpSensorsInit
+     160                    
+     161                    $C$DW$15        .dwtag  DW_TAG_subprogram, DW_AT_name("BumpSensorsInit")
+     162                            .dwattr $C$DW$15, DW_AT_low_pc(BumpSensorsInit)
+     163                            .dwattr $C$DW$15, DW_AT_high_pc(0x00)
+     164                            .dwattr $C$DW$15, DW_AT_TI_symbol_name("BumpSensorsInit")
+     165                            .dwattr $C$DW$15, DW_AT_external
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    4
+
+     166                            .dwattr $C$DW$15, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     167                            .dwattr $C$DW$15, DW_AT_TI_begin_line(0x5c)
+     168                            .dwattr $C$DW$15, DW_AT_TI_begin_column(0x01)
+     169                            .dwattr $C$DW$15, DW_AT_decl_file("../Drivers/sensors.c")
+     170                            .dwattr $C$DW$15, DW_AT_decl_line(0x5c)
+     171                            .dwattr $C$DW$15, DW_AT_decl_column(0x01)
+     172                            .dwattr $C$DW$15, DW_AT_TI_max_frame_size(0x08)
+     173                            .dwpsn  file "../Drivers/sensors.c",line 93,column 1,is_stmt,address BumpSensorsInit,isa 1
+     174                    
+     175                            .dwfde $C$DW$CIE, BumpSensorsInit
+     176                    
+     177                    ;*****************************************************************************
+     178                    ;* FUNCTION NAME: BumpSensorsInit                                            *
+     179                    ;*                                                                           *
+     180                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     181                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     182                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     183                    ;*****************************************************************************
+     184 00000000           BumpSensorsInit:
+     185                    ;* --------------------------------------------------------------------------*
+     186                            .dwcfi  cfa_offset, 0
+     187 00000000 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     188                            .dwcfi  cfa_offset, 4
+     189                            .dwcfi  save_reg_to_mem, 14, -4
+     190                            .dwcfi  cfa_offset, 8
+     191                            .dwcfi  save_reg_to_mem, 3, -8
+     192                            .dwcfi  cfa_offset, 8
+     193                            .dwpsn  file "../Drivers/sensors.c",line 97,column 5,is_stmt,isa 1
+     194 00000002 4886              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |97|  ; [ORIG 16-BIT INS]
+     195                    $C$DW$16        .dwtag  DW_TAG_TI_branch
+     196                            .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     197                            .dwattr $C$DW$16, DW_AT_name("ROM_SysCtlPeripheralEnable")
+     198                            .dwattr $C$DW$16, DW_AT_TI_call
+     199 00000004 FFFEF7FF!         BL        ROM_SysCtlPeripheralEnable ; [DPU_3_PIPE] |97|  ; [KEEP 32-BIT INS]
+     200                            ; CALL OCCURS {ROM_SysCtlPeripheralEnable }  ; [] |97| 
+     201                            .dwpsn  file "../Drivers/sensors.c",line 102,column 5,is_stmt,isa 1
+     202 00000008 4896              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |102|  ; [ORIG 16-BIT INS]
+     203 0000000a 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |102|  ; [ORIG 16-BIT INS]
+     204                    $C$DW$17        .dwtag  DW_TAG_TI_branch
+     205                            .dwattr $C$DW$17, DW_AT_low_pc(0x00)
+     206                            .dwattr $C$DW$17, DW_AT_name("ROM_GPIOPinTypeGPIOInput")
+     207                            .dwattr $C$DW$17, DW_AT_TI_call
+     208 0000000c FFFEF7FF!         BL        ROM_GPIOPinTypeGPIOInput ; [DPU_3_PIPE] |102|  ; [KEEP 32-BIT INS]
+     209                            ; CALL OCCURS {ROM_GPIOPinTypeGPIOInput }  ; [] |102| 
+     210                            .dwpsn  file "../Drivers/sensors.c",line 103,column 5,is_stmt,isa 1
+     211 00000010 4894              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |103|  ; [ORIG 16-BIT INS]
+     212 00000012 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |103|  ; [ORIG 16-BIT INS]
+     213 00000014 2201              MOVS      A3, #1                ; [DPU_3_PIPE] |103|  ; [ORIG 16-BIT INS]
+     214 00000016 230A              MOVS      A4, #10               ; [DPU_3_PIPE] |103|  ; [ORIG 16-BIT INS]
+     215                    $C$DW$18        .dwtag  DW_TAG_TI_branch
+     216                            .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     217                            .dwattr $C$DW$18, DW_AT_name("ROM_GPIOPadConfigSet")
+     218                            .dwattr $C$DW$18, DW_AT_TI_call
+     219 00000018 FFFEF7FF!         BL        ROM_GPIOPadConfigSet  ; [DPU_3_PIPE] |103|  ; [KEEP 32-BIT INS]
+     220                            ; CALL OCCURS {ROM_GPIOPadConfigSet }  ; [] |103| 
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    5
+
+     221                            .dwpsn  file "../Drivers/sensors.c",line 105,column 1,is_stmt,isa 1
+     222                            .dwcfi  cfa_offset, 8
+     223                    $C$DW$19        .dwtag  DW_TAG_TI_branch
+     224                            .dwattr $C$DW$19, DW_AT_low_pc(0x00)
+     225                            .dwattr $C$DW$19, DW_AT_TI_return
+     226 0000001c BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     227                            ; BRANCH OCCURS                  ; [] 
+     228                            .dwattr $C$DW$15, DW_AT_TI_end_file("../Drivers/sensors.c")
+     229                            .dwattr $C$DW$15, DW_AT_TI_end_line(0x69)
+     230                            .dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
+     231                            .dwendentry
+     232                            .dwendtag $C$DW$15
+     233                    
+     234 0000001e                   .sect   ".text"
+     235                            .clink
+     236                            .thumbfunc BumpSensorGetStatus
+     237 0000001e                   .thumb
+     238                            .global BumpSensorGetStatus
+     239                    
+     240                    $C$DW$20        .dwtag  DW_TAG_subprogram, DW_AT_name("BumpSensorGetStatus")
+     241                            .dwattr $C$DW$20, DW_AT_low_pc(BumpSensorGetStatus)
+     242                            .dwattr $C$DW$20, DW_AT_high_pc(0x00)
+     243                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("BumpSensorGetStatus")
+     244                            .dwattr $C$DW$20, DW_AT_external
+     245                            .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$27)
+     246                            .dwattr $C$DW$20, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     247                            .dwattr $C$DW$20, DW_AT_TI_begin_line(0x78)
+     248                            .dwattr $C$DW$20, DW_AT_TI_begin_column(0x0a)
+     249                            .dwattr $C$DW$20, DW_AT_decl_file("../Drivers/sensors.c")
+     250                            .dwattr $C$DW$20, DW_AT_decl_line(0x78)
+     251                            .dwattr $C$DW$20, DW_AT_decl_column(0x0a)
+     252                            .dwattr $C$DW$20, DW_AT_TI_max_frame_size(0x08)
+     253                            .dwpsn  file "../Drivers/sensors.c",line 121,column 1,is_stmt,address BumpSensorGetStatus,isa 
+     254                    
+     255                            .dwfde $C$DW$CIE, BumpSensorGetStatus
+     256                    $C$DW$21        .dwtag  DW_TAG_formal_parameter, DW_AT_name("eBumper")
+     257                            .dwattr $C$DW$21, DW_AT_TI_symbol_name("eBumper")
+     258                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$20)
+     259                            .dwattr $C$DW$21, DW_AT_location[DW_OP_reg0]
+     260                    
+     261                    ;*****************************************************************************
+     262                    ;* FUNCTION NAME: BumpSensorGetStatus                                        *
+     263                    ;*                                                                           *
+     264                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     265                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     266                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     267                    ;*****************************************************************************
+     268 0000001e           BumpSensorGetStatus:
+     269                    ;* --------------------------------------------------------------------------*
+     270                            .dwcfi  cfa_offset, 0
+     271 0000001e B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     272                            .dwcfi  cfa_offset, 4
+     273                            .dwcfi  save_reg_to_mem, 14, -4
+     274                            .dwcfi  cfa_offset, 8
+     275                            .dwcfi  save_reg_to_mem, 3, -8
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    6
+
+     276                            .dwcfi  cfa_offset, 8
+     277                    $C$DW$22        .dwtag  DW_TAG_variable, DW_AT_name("eBumper")
+     278                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("eBumper")
+     279                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$20)
+     280                            .dwattr $C$DW$22, DW_AT_location[DW_OP_breg13 0]
+     281                    $C$DW$23        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     282                            .dwattr $C$DW$23, DW_AT_TI_symbol_name("status")
+     283                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$27)
+     284                            .dwattr $C$DW$23, DW_AT_location[DW_OP_breg13 1]
+     285 00000020 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |121|  ; [KEEP 32-BIT INS]
+     286                            .dwpsn  file "../Drivers/sensors.c",line 127,column 5,is_stmt,isa 1
+     287 00000024 E019              B         ||$C$L8||             ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     288                            ; BRANCH OCCURS {||$C$L8||}      ; [] |127| 
+     289                    ;* --------------------------------------------------------------------------*
+     290                    ;* --------------------------------------------------------------------------*
+     291 00000026           ||$C$L1||:    
+     292                            .dwpsn  file "../Drivers/sensors.c",line 134,column 13,is_stmt,isa 1
+     293 00000026 488F              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     294 00000028 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     295                    $C$DW$24        .dwtag  DW_TAG_TI_branch
+     296                            .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     297                            .dwattr $C$DW$24, DW_AT_name("ROM_GPIOPinRead")
+     298                            .dwattr $C$DW$24, DW_AT_TI_call
+     299 0000002a FFFEF7FF!         BL        ROM_GPIOPinRead       ; [DPU_3_PIPE] |134|  ; [KEEP 32-BIT INS]
+     300                            ; CALL OCCURS {ROM_GPIOPinRead }  ; [] |134| 
+     301 0000002e B108              CBZ       A1, ||$C$L2||         ; []  ; [ORIG 16-BIT INS]
+     302                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |134| 
+     303                    ;* --------------------------------------------------------------------------*
+     304 00000030 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     305 00000032 E000              B         ||$C$L3||             ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     306                            ; BRANCH OCCURS {||$C$L3||}      ; [] |134| 
+     307                    ;* --------------------------------------------------------------------------*
+     308 00000034           ||$C$L2||:    
+     309 00000034 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     310                    ;* --------------------------------------------------------------------------*
+     311 00000036           ||$C$L3||:    
+     312 00000036 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |134|  ; [KEEP 32-BIT INS]
+     313                            .dwpsn  file "../Drivers/sensors.c",line 136,column 13,is_stmt,isa 1
+     314 0000003a E015              B         ||$C$L9||             ; [DPU_3_PIPE] |136|  ; [ORIG 16-BIT INS]
+     315                            ; BRANCH OCCURS {||$C$L9||}      ; [] |136| 
+     316                    ;* --------------------------------------------------------------------------*
+     317 0000003c           ||$C$L4||:    
+     318                            .dwpsn  file "../Drivers/sensors.c",line 144,column 13,is_stmt,isa 1
+     319 0000003c 4889              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |144|  ; [ORIG 16-BIT INS]
+     320 0000003e 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |144|  ; [ORIG 16-BIT INS]
+     321                    $C$DW$25        .dwtag  DW_TAG_TI_branch
+     322                            .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     323                            .dwattr $C$DW$25, DW_AT_name("ROM_GPIOPinRead")
+     324                            .dwattr $C$DW$25, DW_AT_TI_call
+     325 00000040 FFFEF7FF!         BL        ROM_GPIOPinRead       ; [DPU_3_PIPE] |144|  ; [KEEP 32-BIT INS]
+     326                            ; CALL OCCURS {ROM_GPIOPinRead }  ; [] |144| 
+     327 00000044 B108              CBZ       A1, ||$C$L5||         ; []  ; [ORIG 16-BIT INS]
+     328                            ; BRANCHCC OCCURS {||$C$L5||}    ; [] |144| 
+     329                    ;* --------------------------------------------------------------------------*
+     330 00000046 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |144|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    7
+
+     331 00000048 E000              B         ||$C$L6||             ; [DPU_3_PIPE] |144|  ; [ORIG 16-BIT INS]
+     332                            ; BRANCH OCCURS {||$C$L6||}      ; [] |144| 
+     333                    ;* --------------------------------------------------------------------------*
+     334 0000004a           ||$C$L5||:    
+     335 0000004a 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |144|  ; [ORIG 16-BIT INS]
+     336                    ;* --------------------------------------------------------------------------*
+     337 0000004c           ||$C$L6||:    
+     338 0000004c 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |144|  ; [KEEP 32-BIT INS]
+     339                            .dwpsn  file "../Drivers/sensors.c",line 146,column 13,is_stmt,isa 1
+     340 00000050 E00A              B         ||$C$L9||             ; [DPU_3_PIPE] |146|  ; [ORIG 16-BIT INS]
+     341                            ; BRANCH OCCURS {||$C$L9||}      ; [] |146| 
+     342                    ;* --------------------------------------------------------------------------*
+     343 00000052           ||$C$L7||:    
+     344                            .dwpsn  file "../Drivers/sensors.c",line 156,column 13,is_stmt,isa 1
+     345 00000052 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |156|  ; [ORIG 16-BIT INS]
+     346 00000054 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |156|  ; [KEEP 32-BIT INS]
+     347                            .dwpsn  file "../Drivers/sensors.c",line 157,column 13,is_stmt,isa 1
+     348 00000058 E006              B         ||$C$L9||             ; [DPU_3_PIPE] |157|  ; [ORIG 16-BIT INS]
+     349                            ; BRANCH OCCURS {||$C$L9||}      ; [] |157| 
+     350                    ;* --------------------------------------------------------------------------*
+     351                    ;* --------------------------------------------------------------------------*
+     352 0000005a           ||$C$L8||:    
+     353                            .dwpsn  file "../Drivers/sensors.c",line 127,column 5,is_stmt,isa 1
+     354 0000005a 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |127|  ; [KEEP 32-BIT INS]
+     355 0000005e 2800              CMP       A1, #0                ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     356 00000060 D0EC              BEQ       ||$C$L4||             ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     357                            ; BRANCHCC OCCURS {||$C$L4||}    ; [] |127| 
+     358                    ;* --------------------------------------------------------------------------*
+     359 00000062 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     360 00000064 D0DF              BEQ       ||$C$L1||             ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     361                            ; BRANCHCC OCCURS {||$C$L1||}    ; [] |127| 
+     362                    ;* --------------------------------------------------------------------------*
+     363 00000066 E7F4              B         ||$C$L7||             ; [DPU_3_PIPE] |127|  ; [ORIG 16-BIT INS]
+     364                            ; BRANCH OCCURS {||$C$L7||}      ; [] |127| 
+     365                    ;* --------------------------------------------------------------------------*
+     366 00000068           ||$C$L9||:    
+     367                            .dwpsn  file "../Drivers/sensors.c",line 161,column 5,is_stmt,isa 1
+     368 00000068 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |161|  ; [KEEP 32-BIT INS]
+     369                            .dwpsn  file "../Drivers/sensors.c",line 162,column 1,is_stmt,isa 1
+     370                            .dwcfi  cfa_offset, 8
+     371                    $C$DW$26        .dwtag  DW_TAG_TI_branch
+     372                            .dwattr $C$DW$26, DW_AT_low_pc(0x00)
+     373                            .dwattr $C$DW$26, DW_AT_TI_return
+     374 0000006c BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     375                            ; BRANCH OCCURS                  ; [] 
+     376                            .dwattr $C$DW$20, DW_AT_TI_end_file("../Drivers/sensors.c")
+     377                            .dwattr $C$DW$20, DW_AT_TI_end_line(0xa2)
+     378                            .dwattr $C$DW$20, DW_AT_TI_end_column(0x01)
+     379                            .dwendentry
+     380                            .dwendtag $C$DW$20
+     381                    
+     382 0000006e                   .sect   ".text"
+     383                            .clink
+     384                            .thumbfunc BumpSensorDebouncer
+     385 0000006e                   .thumb
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    8
+
+     386                            .global BumpSensorDebouncer
+     387                    
+     388                    $C$DW$27        .dwtag  DW_TAG_subprogram, DW_AT_name("BumpSensorDebouncer")
+     389                            .dwattr $C$DW$27, DW_AT_low_pc(BumpSensorDebouncer)
+     390                            .dwattr $C$DW$27, DW_AT_high_pc(0x00)
+     391                            .dwattr $C$DW$27, DW_AT_TI_symbol_name("BumpSensorDebouncer")
+     392                            .dwattr $C$DW$27, DW_AT_external
+     393                            .dwattr $C$DW$27, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     394                            .dwattr $C$DW$27, DW_AT_TI_begin_line(0xb1)
+     395                            .dwattr $C$DW$27, DW_AT_TI_begin_column(0x01)
+     396                            .dwattr $C$DW$27, DW_AT_decl_file("../Drivers/sensors.c")
+     397                            .dwattr $C$DW$27, DW_AT_decl_line(0xb1)
+     398                            .dwattr $C$DW$27, DW_AT_decl_column(0x01)
+     399                            .dwattr $C$DW$27, DW_AT_TI_max_frame_size(0x08)
+     400                            .dwpsn  file "../Drivers/sensors.c",line 178,column 1,is_stmt,address BumpSensorDebouncer,isa 
+     401                    
+     402                            .dwfde $C$DW$CIE, BumpSensorDebouncer
+     403                    $C$DW$28        .dwtag  DW_TAG_variable, DW_AT_name("ucBumperClockA")
+     404                            .dwattr $C$DW$28, DW_AT_TI_symbol_name("ucBumperClockA$1")
+     405                            .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$6)
+     406                            .dwattr $C$DW$28, DW_AT_location[DW_OP_addr ucBumperClockA$1]
+     407                    $C$DW$29        .dwtag  DW_TAG_variable, DW_AT_name("ucBumperClockB")
+     408                            .dwattr $C$DW$29, DW_AT_TI_symbol_name("ucBumperClockB$2")
+     409                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$6)
+     410                            .dwattr $C$DW$29, DW_AT_location[DW_OP_addr ucBumperClockB$2]
+     411                    
+     412                    ;*****************************************************************************
+     413                    ;* FUNCTION NAME: BumpSensorDebouncer                                        *
+     414                    ;*                                                                           *
+     415                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     416                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     417                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     418                    ;*****************************************************************************
+     419 0000006e           BumpSensorDebouncer:
+     420                    ;* --------------------------------------------------------------------------*
+     421                            .dwcfi  cfa_offset, 0
+     422 0000006e B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     423                            .dwcfi  cfa_offset, 4
+     424                            .dwcfi  save_reg_to_mem, 14, -4
+     425                            .dwcfi  cfa_offset, 8
+     426                            .dwcfi  save_reg_to_mem, 3, -8
+     427                            .dwcfi  cfa_offset, 8
+     428                    $C$DW$30        .dwtag  DW_TAG_variable, DW_AT_name("ucData")
+     429                            .dwattr $C$DW$30, DW_AT_TI_symbol_name("ucData")
+     430                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$6)
+     431                            .dwattr $C$DW$30, DW_AT_location[DW_OP_breg13 0]
+     432                    $C$DW$31        .dwtag  DW_TAG_variable, DW_AT_name("ucDelta")
+     433                            .dwattr $C$DW$31, DW_AT_TI_symbol_name("ucDelta")
+     434                            .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$6)
+     435                            .dwattr $C$DW$31, DW_AT_location[DW_OP_breg13 1]
+     436                            .dwpsn  file "../Drivers/sensors.c",line 187,column 5,is_stmt,isa 1
+     437 00000070 487C              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |187|  ; [ORIG 16-BIT INS]
+     438 00000072 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |187|  ; [ORIG 16-BIT INS]
+     439                    $C$DW$32        .dwtag  DW_TAG_TI_branch
+     440                            .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE    9
+
+     441                            .dwattr $C$DW$32, DW_AT_name("ROM_GPIOPinRead")
+     442                            .dwattr $C$DW$32, DW_AT_TI_call
+     443 00000074 FFFEF7FF!         BL        ROM_GPIOPinRead       ; [DPU_3_PIPE] |187|  ; [KEEP 32-BIT INS]
+     444                            ; CALL OCCURS {ROM_GPIOPinRead }  ; [] |187| 
+     445 00000078 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |187|  ; [KEEP 32-BIT INS]
+     446                            .dwpsn  file "../Drivers/sensors.c",line 192,column 5,is_stmt,isa 1
+     447 0000007c 488E              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |192|  ; [ORIG 16-BIT INS]
+     448 0000007e 1000F89D          LDRB      A2, [SP, #0]          ; [DPU_3_PIPE] |192|  ; [KEEP 32-BIT INS]
+     449 00000082 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |192|  ; [ORIG 16-BIT INS]
+     450 00000084 4048              EORS      A1, A1, A2            ; [DPU_3_PIPE] |192|  ; [ORIG 16-BIT INS]
+     451 00000086 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |192|  ; [KEEP 32-BIT INS]
+     452                            .dwpsn  file "../Drivers/sensors.c",line 197,column 5,is_stmt,isa 1
+     453 0000008a 488D              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     454 0000008c 498B              LDR       A2, $C$CON4           ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     455 0000008e 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     456 00000090 780A              LDRB      A3, [A2, #0]          ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     457 00000092 4050              EORS      A1, A1, A3            ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     458 00000094 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |197|  ; [ORIG 16-BIT INS]
+     459                            .dwpsn  file "../Drivers/sensors.c",line 198,column 5,is_stmt,isa 1
+     460 00000096 488A              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |198|  ; [ORIG 16-BIT INS]
+     461 00000098 4989              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |198|  ; [ORIG 16-BIT INS]
+     462 0000009a 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |198|  ; [ORIG 16-BIT INS]
+     463 0000009c 43C0              MVNS      A1, A1                ; [DPU_3_PIPE] |198|  ; [ORIG 16-BIT INS]
+     464 0000009e 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |198|  ; [ORIG 16-BIT INS]
+     465                            .dwpsn  file "../Drivers/sensors.c",line 203,column 5,is_stmt,isa 1
+     466 000000a0 4986              LDR       A2, $C$CON4           ; [DPU_3_PIPE] |203|  ; [ORIG 16-BIT INS]
+     467 000000a2 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |203|  ; [KEEP 32-BIT INS]
+     468 000000a6 780A              LDRB      A3, [A2, #0]          ; [DPU_3_PIPE] |203|  ; [ORIG 16-BIT INS]
+     469 000000a8 4010              ANDS      A1, A1, A3            ; [DPU_3_PIPE] |203|  ; [ORIG 16-BIT INS]
+     470 000000aa 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |203|  ; [ORIG 16-BIT INS]
+     471                            .dwpsn  file "../Drivers/sensors.c",line 204,column 5,is_stmt,isa 1
+     472 000000ac 4984              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |204|  ; [ORIG 16-BIT INS]
+     473 000000ae 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |204|  ; [KEEP 32-BIT INS]
+     474 000000b2 780A              LDRB      A3, [A2, #0]          ; [DPU_3_PIPE] |204|  ; [ORIG 16-BIT INS]
+     475 000000b4 4010              ANDS      A1, A1, A3            ; [DPU_3_PIPE] |204|  ; [ORIG 16-BIT INS]
+     476 000000b6 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |204|  ; [ORIG 16-BIT INS]
+     477                            .dwpsn  file "../Drivers/sensors.c",line 210,column 5,is_stmt,isa 1
+     478 000000b8 4880              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     479 000000ba 7802              LDRB      A3, [A1, #0]          ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     480 000000bc 4880              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     481 000000be 497E              LDR       A2, $C$CON3           ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     482 000000c0 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     483 000000c2 4310              ORRS      A1, A1, A3            ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     484 000000c4 780A              LDRB      A3, [A2, #0]          ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     485 000000c6 4010              ANDS      A1, A1, A3            ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     486 000000c8 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |210|  ; [ORIG 16-BIT INS]
+     487                            .dwpsn  file "../Drivers/sensors.c",line 211,column 5,is_stmt,isa 1
+     488 000000ca 487C              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     489 000000cc 7801              LDRB      A2, [A1, #0]          ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     490 000000ce 487C              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     491 000000d0 4A79              LDR       A3, $C$CON3           ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     492 000000d2 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     493 000000d4 4308              ORRS      A1, A1, A2            ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     494 000000d6 1000F89D          LDRB      A2, [SP, #0]          ; [DPU_3_PIPE] |211|  ; [KEEP 32-BIT INS]
+     495 000000da 4381              BICS      A2, A2, A1            ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   10
+
+     496 000000dc 7810              LDRB      A1, [A3, #0]          ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     497 000000de 4301              ORRS      A2, A2, A1            ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     498 000000e0 7011              STRB      A2, [A3, #0]          ; [DPU_3_PIPE] |211|  ; [ORIG 16-BIT INS]
+     499                            .dwpsn  file "../Drivers/sensors.c",line 212,column 1,is_stmt,isa 1
+     500                            .dwcfi  cfa_offset, 8
+     501                    $C$DW$33        .dwtag  DW_TAG_TI_branch
+     502                            .dwattr $C$DW$33, DW_AT_low_pc(0x00)
+     503                            .dwattr $C$DW$33, DW_AT_TI_return
+     504 000000e2 BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     505                            ; BRANCH OCCURS                  ; [] 
+     506                            .dwattr $C$DW$27, DW_AT_TI_end_file("../Drivers/sensors.c")
+     507                            .dwattr $C$DW$27, DW_AT_TI_end_line(0xd4)
+     508                            .dwattr $C$DW$27, DW_AT_TI_end_column(0x01)
+     509                            .dwendentry
+     510                            .dwendtag $C$DW$27
+     511                    
+     512 000000e4                   .sect   ".text"
+     513                            .clink
+     514                            .thumbfunc BumpSensorGetDebounced
+     515 000000e4                   .thumb
+     516                            .global BumpSensorGetDebounced
+     517                    
+     518                    $C$DW$34        .dwtag  DW_TAG_subprogram, DW_AT_name("BumpSensorGetDebounced")
+     519                            .dwattr $C$DW$34, DW_AT_low_pc(BumpSensorGetDebounced)
+     520                            .dwattr $C$DW$34, DW_AT_high_pc(0x00)
+     521                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("BumpSensorGetDebounced")
+     522                            .dwattr $C$DW$34, DW_AT_external
+     523                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$27)
+     524                            .dwattr $C$DW$34, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     525                            .dwattr $C$DW$34, DW_AT_TI_begin_line(0xe4)
+     526                            .dwattr $C$DW$34, DW_AT_TI_begin_column(0x0a)
+     527                            .dwattr $C$DW$34, DW_AT_decl_file("../Drivers/sensors.c")
+     528                            .dwattr $C$DW$34, DW_AT_decl_line(0xe4)
+     529                            .dwattr $C$DW$34, DW_AT_decl_column(0x0a)
+     530                            .dwattr $C$DW$34, DW_AT_TI_max_frame_size(0x08)
+     531                            .dwpsn  file "../Drivers/sensors.c",line 229,column 1,is_stmt,address BumpSensorGetDebounced,i
+     532                    
+     533                            .dwfde $C$DW$CIE, BumpSensorGetDebounced
+     534                    $C$DW$35        .dwtag  DW_TAG_formal_parameter, DW_AT_name("eBumper")
+     535                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("eBumper")
+     536                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$20)
+     537                            .dwattr $C$DW$35, DW_AT_location[DW_OP_reg0]
+     538                    
+     539                    ;*****************************************************************************
+     540                    ;* FUNCTION NAME: BumpSensorGetDebounced                                     *
+     541                    ;*                                                                           *
+     542                    ;*   Regs Modified     : A1,SP,SR                                            *
+     543                    ;*   Regs Used         : A1,SP,LR,SR                                         *
+     544                    ;*   Local Frame Size  : 0 Args + 4 Auto + 0 Save = 4 byte                   *
+     545                    ;*****************************************************************************
+     546 000000e4           BumpSensorGetDebounced:
+     547                    ;* --------------------------------------------------------------------------*
+     548                            .dwcfi  cfa_offset, 0
+     549 000000e4 0D08F1AD          SUB       SP, SP, #8            ; [DPU_3_PIPE]  ; [KEEP 32-BIT INS]
+     550                            .dwcfi  cfa_offset, 8
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   11
+
+     551                    $C$DW$36        .dwtag  DW_TAG_variable, DW_AT_name("eBumper")
+     552                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("eBumper")
+     553                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$20)
+     554                            .dwattr $C$DW$36, DW_AT_location[DW_OP_breg13 0]
+     555                    $C$DW$37        .dwtag  DW_TAG_variable, DW_AT_name("status")
+     556                            .dwattr $C$DW$37, DW_AT_TI_symbol_name("status")
+     557                            .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$27)
+     558                            .dwattr $C$DW$37, DW_AT_location[DW_OP_breg13 1]
+     559 000000e8 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |229|  ; [KEEP 32-BIT INS]
+     560                            .dwpsn  file "../Drivers/sensors.c",line 235,column 5,is_stmt,isa 1
+     561 000000ec E017              B         ||$C$L17||            ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     562                            ; BRANCH OCCURS {||$C$L17||}     ; [] |235| 
+     563                    ;* --------------------------------------------------------------------------*
+     564                    ;* --------------------------------------------------------------------------*
+     565 000000ee           ||$C$L10||:    
+     566                            .dwpsn  file "../Drivers/sensors.c",line 242,column 13,is_stmt,isa 1
+     567 000000ee 4872              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     568 000000f0 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     569 000000f2 0840              LSRS      A1, A1, #1            ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     570 000000f4 D301              BCC       ||$C$L11||            ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     571                            ; BRANCHCC OCCURS {||$C$L11||}   ; [] |242| 
+     572                    ;* --------------------------------------------------------------------------*
+     573 000000f6 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     574 000000f8 E000              B         ||$C$L12||            ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     575                            ; BRANCH OCCURS {||$C$L12||}     ; [] |242| 
+     576                    ;* --------------------------------------------------------------------------*
+     577 000000fa           ||$C$L11||:    
+     578 000000fa 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |242|  ; [ORIG 16-BIT INS]
+     579                    ;* --------------------------------------------------------------------------*
+     580 000000fc           ||$C$L12||:    
+     581 000000fc 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |242|  ; [KEEP 32-BIT INS]
+     582                            .dwpsn  file "../Drivers/sensors.c",line 243,column 13,is_stmt,isa 1
+     583 00000100 E014              B         ||$C$L18||            ; [DPU_3_PIPE] |243|  ; [ORIG 16-BIT INS]
+     584                            ; BRANCH OCCURS {||$C$L18||}     ; [] |243| 
+     585                    ;* --------------------------------------------------------------------------*
+     586 00000102           ||$C$L13||:    
+     587                            .dwpsn  file "../Drivers/sensors.c",line 251,column 13,is_stmt,isa 1
+     588 00000102 486D              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     589 00000104 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     590 00000106 0880              LSRS      A1, A1, #2            ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     591 00000108 D301              BCC       ||$C$L14||            ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     592                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |251| 
+     593                    ;* --------------------------------------------------------------------------*
+     594 0000010a 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     595 0000010c E000              B         ||$C$L15||            ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     596                            ; BRANCH OCCURS {||$C$L15||}     ; [] |251| 
+     597                    ;* --------------------------------------------------------------------------*
+     598 0000010e           ||$C$L14||:    
+     599 0000010e 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |251|  ; [ORIG 16-BIT INS]
+     600                    ;* --------------------------------------------------------------------------*
+     601 00000110           ||$C$L15||:    
+     602 00000110 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |251|  ; [KEEP 32-BIT INS]
+     603                            .dwpsn  file "../Drivers/sensors.c",line 252,column 13,is_stmt,isa 1
+     604 00000114 E00A              B         ||$C$L18||            ; [DPU_3_PIPE] |252|  ; [ORIG 16-BIT INS]
+     605                            ; BRANCH OCCURS {||$C$L18||}     ; [] |252| 
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   12
+
+     606                    ;* --------------------------------------------------------------------------*
+     607 00000116           ||$C$L16||:    
+     608                            .dwpsn  file "../Drivers/sensors.c",line 262,column 13,is_stmt,isa 1
+     609 00000116 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |262|  ; [ORIG 16-BIT INS]
+     610 00000118 0001F88D          STRB      A1, [SP, #1]          ; [DPU_3_PIPE] |262|  ; [KEEP 32-BIT INS]
+     611                            .dwpsn  file "../Drivers/sensors.c",line 263,column 13,is_stmt,isa 1
+     612 0000011c E006              B         ||$C$L18||            ; [DPU_3_PIPE] |263|  ; [ORIG 16-BIT INS]
+     613                            ; BRANCH OCCURS {||$C$L18||}     ; [] |263| 
+     614                    ;* --------------------------------------------------------------------------*
+     615                    ;* --------------------------------------------------------------------------*
+     616 0000011e           ||$C$L17||:    
+     617                            .dwpsn  file "../Drivers/sensors.c",line 235,column 5,is_stmt,isa 1
+     618 0000011e 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |235|  ; [KEEP 32-BIT INS]
+     619 00000122 2800              CMP       A1, #0                ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     620 00000124 D0ED              BEQ       ||$C$L13||            ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     621                            ; BRANCHCC OCCURS {||$C$L13||}   ; [] |235| 
+     622                    ;* --------------------------------------------------------------------------*
+     623 00000126 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     624 00000128 D0E1              BEQ       ||$C$L10||            ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     625                            ; BRANCHCC OCCURS {||$C$L10||}   ; [] |235| 
+     626                    ;* --------------------------------------------------------------------------*
+     627 0000012a E7F4              B         ||$C$L16||            ; [DPU_3_PIPE] |235|  ; [ORIG 16-BIT INS]
+     628                            ; BRANCH OCCURS {||$C$L16||}     ; [] |235| 
+     629                    ;* --------------------------------------------------------------------------*
+     630 0000012c           ||$C$L18||:    
+     631                            .dwpsn  file "../Drivers/sensors.c",line 267,column 5,is_stmt,isa 1
+     632 0000012c 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |267|  ; [KEEP 32-BIT INS]
+     633                            .dwpsn  file "../Drivers/sensors.c",line 268,column 1,is_stmt,isa 1
+     634 00000130 B002              ADD       SP, SP, #8            ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     635                            .dwcfi  cfa_offset, 0
+     636                    $C$DW$38        .dwtag  DW_TAG_TI_branch
+     637                            .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     638                            .dwattr $C$DW$38, DW_AT_TI_return
+     639 00000132 4770              BX        LR                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     640                            ; BRANCH OCCURS                  ; [] 
+     641                            .dwattr $C$DW$34, DW_AT_TI_end_file("../Drivers/sensors.c")
+     642                            .dwattr $C$DW$34, DW_AT_TI_end_line(0x10c)
+     643                            .dwattr $C$DW$34, DW_AT_TI_end_column(0x01)
+     644                            .dwendentry
+     645                            .dwendtag $C$DW$34
+     646                    
+     647 00000134                   .sect   ".text"
+     648                            .clink
+     649                            .thumbfunc WheelSensorsInit
+     650 00000134                   .thumb
+     651                            .global WheelSensorsInit
+     652                    
+     653                    $C$DW$39        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorsInit")
+     654                            .dwattr $C$DW$39, DW_AT_low_pc(WheelSensorsInit)
+     655                            .dwattr $C$DW$39, DW_AT_high_pc(0x00)
+     656                            .dwattr $C$DW$39, DW_AT_TI_symbol_name("WheelSensorsInit")
+     657                            .dwattr $C$DW$39, DW_AT_external
+     658                            .dwattr $C$DW$39, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     659                            .dwattr $C$DW$39, DW_AT_TI_begin_line(0x11f)
+     660                            .dwattr $C$DW$39, DW_AT_TI_begin_column(0x01)
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   13
+
+     661                            .dwattr $C$DW$39, DW_AT_decl_file("../Drivers/sensors.c")
+     662                            .dwattr $C$DW$39, DW_AT_decl_line(0x11f)
+     663                            .dwattr $C$DW$39, DW_AT_decl_column(0x01)
+     664                            .dwattr $C$DW$39, DW_AT_TI_max_frame_size(0x08)
+     665                            .dwpsn  file "../Drivers/sensors.c",line 288,column 1,is_stmt,address WheelSensorsInit,isa 1
+     666                    
+     667                            .dwfde $C$DW$CIE, WheelSensorsInit
+     668                    $C$DW$40        .dwtag  DW_TAG_formal_parameter, DW_AT_name("pfnCallback")
+     669                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("pfnCallback")
+     670                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$25)
+     671                            .dwattr $C$DW$40, DW_AT_location[DW_OP_reg0]
+     672                    
+     673                    ;*****************************************************************************
+     674                    ;* FUNCTION NAME: WheelSensorsInit                                           *
+     675                    ;*                                                                           *
+     676                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     677                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     678                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     679                    ;*****************************************************************************
+     680 00000134           WheelSensorsInit:
+     681                    ;* --------------------------------------------------------------------------*
+     682                            .dwcfi  cfa_offset, 0
+     683 00000134 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     684                            .dwcfi  cfa_offset, 4
+     685                            .dwcfi  save_reg_to_mem, 14, -4
+     686                            .dwcfi  cfa_offset, 8
+     687                            .dwcfi  save_reg_to_mem, 3, -8
+     688                            .dwcfi  cfa_offset, 8
+     689                    $C$DW$41        .dwtag  DW_TAG_variable, DW_AT_name("pfnCallback")
+     690                            .dwattr $C$DW$41, DW_AT_TI_symbol_name("pfnCallback")
+     691                            .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$25)
+     692                            .dwattr $C$DW$41, DW_AT_location[DW_OP_breg13 0]
+     693 00000136 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |288|  ; [ORIG 16-BIT INS]
+     694                            .dwpsn  file "../Drivers/sensors.c",line 292,column 5,is_stmt,isa 1
+     695 00000138 4962              LDR       A2, $C$CON6           ; [DPU_3_PIPE] |292|  ; [ORIG 16-BIT INS]
+     696 0000013a 9800              LDR       A1, [SP, #0]          ; [DPU_3_PIPE] |292|  ; [ORIG 16-BIT INS]
+     697 0000013c 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |292|  ; [ORIG 16-BIT INS]
+     698                            .dwpsn  file "../Drivers/sensors.c",line 297,column 5,is_stmt,isa 1
+     699 0000013e 4837              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |297|  ; [ORIG 16-BIT INS]
+     700                    $C$DW$42        .dwtag  DW_TAG_TI_branch
+     701                            .dwattr $C$DW$42, DW_AT_low_pc(0x00)
+     702                            .dwattr $C$DW$42, DW_AT_name("ROM_SysCtlPeripheralEnable")
+     703                            .dwattr $C$DW$42, DW_AT_TI_call
+     704 00000140 FFFEF7FF!         BL        ROM_SysCtlPeripheralEnable ; [DPU_3_PIPE] |297|  ; [KEEP 32-BIT INS]
+     705                            ; CALL OCCURS {ROM_SysCtlPeripheralEnable }  ; [] |297| 
+     706                            .dwpsn  file "../Drivers/sensors.c",line 298,column 5,is_stmt,isa 1
+     707 00000144 4835              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |298|  ; [ORIG 16-BIT INS]
+     708                    $C$DW$43        .dwtag  DW_TAG_TI_branch
+     709                            .dwattr $C$DW$43, DW_AT_low_pc(0x00)
+     710                            .dwattr $C$DW$43, DW_AT_name("ROM_SysCtlPeripheralEnable")
+     711                            .dwattr $C$DW$43, DW_AT_TI_call
+     712 00000146 FFFEF7FF!         BL        ROM_SysCtlPeripheralEnable ; [DPU_3_PIPE] |298|  ; [KEEP 32-BIT INS]
+     713                            ; CALL OCCURS {ROM_SysCtlPeripheralEnable }  ; [] |298| 
+     714                            .dwpsn  file "../Drivers/sensors.c",line 299,column 5,is_stmt,isa 1
+     715 0000014a 4834              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |299|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   14
+
+     716                    $C$DW$44        .dwtag  DW_TAG_TI_branch
+     717                            .dwattr $C$DW$44, DW_AT_low_pc(0x00)
+     718                            .dwattr $C$DW$44, DW_AT_name("ROM_SysCtlPeripheralEnable")
+     719                            .dwattr $C$DW$44, DW_AT_TI_call
+     720 0000014c FFFEF7FF!         BL        ROM_SysCtlPeripheralEnable ; [DPU_3_PIPE] |299|  ; [KEEP 32-BIT INS]
+     721                            ; CALL OCCURS {ROM_SysCtlPeripheralEnable }  ; [] |299| 
+     722                            .dwpsn  file "../Drivers/sensors.c",line 304,column 5,is_stmt,isa 1
+     723 00000150 4844              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |304|  ; [ORIG 16-BIT INS]
+     724 00000152 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |304|  ; [ORIG 16-BIT INS]
+     725                    $C$DW$45        .dwtag  DW_TAG_TI_branch
+     726                            .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+     727                            .dwattr $C$DW$45, DW_AT_name("ROM_GPIOPinTypeGPIOInput")
+     728                            .dwattr $C$DW$45, DW_AT_TI_call
+     729 00000154 FFFEF7FF!         BL        ROM_GPIOPinTypeGPIOInput ; [DPU_3_PIPE] |304|  ; [KEEP 32-BIT INS]
+     730                            ; CALL OCCURS {ROM_GPIOPinTypeGPIOInput }  ; [] |304| 
+     731                            .dwpsn  file "../Drivers/sensors.c",line 305,column 5,is_stmt,isa 1
+     732 00000158 4842              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |305|  ; [ORIG 16-BIT INS]
+     733 0000015a 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |305|  ; [ORIG 16-BIT INS]
+     734                    $C$DW$46        .dwtag  DW_TAG_TI_branch
+     735                            .dwattr $C$DW$46, DW_AT_low_pc(0x00)
+     736                            .dwattr $C$DW$46, DW_AT_name("ROM_GPIOPinTypeGPIOInput")
+     737                            .dwattr $C$DW$46, DW_AT_TI_call
+     738 0000015c FFFEF7FF!         BL        ROM_GPIOPinTypeGPIOInput ; [DPU_3_PIPE] |305|  ; [KEEP 32-BIT INS]
+     739                            ; CALL OCCURS {ROM_GPIOPinTypeGPIOInput }  ; [] |305| 
+     740                            .dwpsn  file "../Drivers/sensors.c",line 311,column 5,is_stmt,isa 1
+     741 00000160 4840              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |311|  ; [ORIG 16-BIT INS]
+     742 00000162 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |311|  ; [ORIG 16-BIT INS]
+     743                    $C$DW$47        .dwtag  DW_TAG_TI_branch
+     744                            .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+     745                            .dwattr $C$DW$47, DW_AT_name("ROM_GPIOPinTypeGPIOOutput")
+     746                            .dwattr $C$DW$47, DW_AT_TI_call
+     747 00000164 FFFEF7FF!         BL        ROM_GPIOPinTypeGPIOOutput ; [DPU_3_PIPE] |311|  ; [KEEP 32-BIT INS]
+     748                            ; CALL OCCURS {ROM_GPIOPinTypeGPIOOutput }  ; [] |311| 
+     749                            .dwpsn  file "../Drivers/sensors.c",line 312,column 5,is_stmt,isa 1
+     750 00000168 483E              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     751 0000016a 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     752 0000016c 2204              MOVS      A3, #4                ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     753 0000016e 2308              MOVS      A4, #8                ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     754                    $C$DW$48        .dwtag  DW_TAG_TI_branch
+     755                            .dwattr $C$DW$48, DW_AT_low_pc(0x00)
+     756                            .dwattr $C$DW$48, DW_AT_name("ROM_GPIOPadConfigSet")
+     757                            .dwattr $C$DW$48, DW_AT_TI_call
+     758 00000170 FFFEF7FF!         BL        ROM_GPIOPadConfigSet  ; [DPU_3_PIPE] |312|  ; [KEEP 32-BIT INS]
+     759                            ; CALL OCCURS {ROM_GPIOPadConfigSet }  ; [] |312| 
+     760                            .dwpsn  file "../Drivers/sensors.c",line 314,column 5,is_stmt,isa 1
+     761 00000174 483B              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |314|  ; [ORIG 16-BIT INS]
+     762 00000176 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |314|  ; [ORIG 16-BIT INS]
+     763 00000178 2240              MOVS      A3, #64               ; [DPU_3_PIPE] |314|  ; [ORIG 16-BIT INS]
+     764                    $C$DW$49        .dwtag  DW_TAG_TI_branch
+     765                            .dwattr $C$DW$49, DW_AT_low_pc(0x00)
+     766                            .dwattr $C$DW$49, DW_AT_name("ROM_GPIOPinWrite")
+     767                            .dwattr $C$DW$49, DW_AT_TI_call
+     768 0000017a FFFEF7FF!         BL        ROM_GPIOPinWrite      ; [DPU_3_PIPE] |314|  ; [KEEP 32-BIT INS]
+     769                            ; CALL OCCURS {ROM_GPIOPinWrite }  ; [] |314| 
+     770                            .dwpsn  file "../Drivers/sensors.c",line 320,column 5,is_stmt,isa 1
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   15
+
+     771 0000017e 4839              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |320|  ; [ORIG 16-BIT INS]
+     772 00000180 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |320|  ; [ORIG 16-BIT INS]
+     773                    $C$DW$50        .dwtag  DW_TAG_TI_branch
+     774                            .dwattr $C$DW$50, DW_AT_low_pc(0x00)
+     775                            .dwattr $C$DW$50, DW_AT_name("ROM_GPIOPinIntDisable")
+     776                            .dwattr $C$DW$50, DW_AT_TI_call
+     777 00000182 FFFEF7FF!         BL        ROM_GPIOPinIntDisable ; [DPU_3_PIPE] |320|  ; [KEEP 32-BIT INS]
+     778                            ; CALL OCCURS {ROM_GPIOPinIntDisable }  ; [] |320| 
+     779                            .dwpsn  file "../Drivers/sensors.c",line 321,column 5,is_stmt,isa 1
+     780 00000186 4837              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |321|  ; [ORIG 16-BIT INS]
+     781 00000188 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |321|  ; [ORIG 16-BIT INS]
+     782                    $C$DW$51        .dwtag  DW_TAG_TI_branch
+     783                            .dwattr $C$DW$51, DW_AT_low_pc(0x00)
+     784                            .dwattr $C$DW$51, DW_AT_name("ROM_GPIOPinIntDisable")
+     785                            .dwattr $C$DW$51, DW_AT_TI_call
+     786 0000018a FFFEF7FF!         BL        ROM_GPIOPinIntDisable ; [DPU_3_PIPE] |321|  ; [KEEP 32-BIT INS]
+     787                            ; CALL OCCURS {ROM_GPIOPinIntDisable }  ; [] |321| 
+     788                            .dwpsn  file "../Drivers/sensors.c",line 323,column 5,is_stmt,isa 1
+     789 0000018e 4835              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |323|  ; [ORIG 16-BIT INS]
+     790 00000190 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |323|  ; [ORIG 16-BIT INS]
+     791 00000192 2204              MOVS      A3, #4                ; [DPU_3_PIPE] |323|  ; [ORIG 16-BIT INS]
+     792                    $C$DW$52        .dwtag  DW_TAG_TI_branch
+     793                            .dwattr $C$DW$52, DW_AT_low_pc(0x00)
+     794                            .dwattr $C$DW$52, DW_AT_name("ROM_GPIOIntTypeSet")
+     795                            .dwattr $C$DW$52, DW_AT_TI_call
+     796 00000194 FFFEF7FF!         BL        ROM_GPIOIntTypeSet    ; [DPU_3_PIPE] |323|  ; [KEEP 32-BIT INS]
+     797                            ; CALL OCCURS {ROM_GPIOIntTypeSet }  ; [] |323| 
+     798                    ;* --------------------------------------------------------------------------*
+     799                            .dwpsn  file "../Drivers/sensors.c",line 325,column 5,is_stmt,isa 1
+     800 00000198 4832              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |325|  ; [ORIG 16-BIT INS]
+     801 0000019a 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |325|  ; [ORIG 16-BIT INS]
+     802 0000019c 2204              MOVS      A3, #4                ; [DPU_3_PIPE] |325|  ; [ORIG 16-BIT INS]
+     803                    $C$DW$53        .dwtag  DW_TAG_TI_branch
+     804                            .dwattr $C$DW$53, DW_AT_low_pc(0x00)
+     805                            .dwattr $C$DW$53, DW_AT_name("ROM_GPIOIntTypeSet")
+     806                            .dwattr $C$DW$53, DW_AT_TI_call
+     807 0000019e FFFEF7FF!         BL        ROM_GPIOIntTypeSet    ; [DPU_3_PIPE] |325|  ; [KEEP 32-BIT INS]
+     808                            ; CALL OCCURS {ROM_GPIOIntTypeSet }  ; [] |325| 
+     809                            .dwpsn  file "../Drivers/sensors.c",line 332,column 5,is_stmt,isa 1
+     810 000001a2 2014              MOVS      A1, #20               ; [DPU_3_PIPE] |332|  ; [ORIG 16-BIT INS]
+     811                    $C$DW$54        .dwtag  DW_TAG_TI_branch
+     812                            .dwattr $C$DW$54, DW_AT_low_pc(0x00)
+     813                            .dwattr $C$DW$54, DW_AT_name("ROM_IntEnable")
+     814                            .dwattr $C$DW$54, DW_AT_TI_call
+     815 000001a4 FFFEF7FF!         BL        ROM_IntEnable         ; [DPU_3_PIPE] |332|  ; [KEEP 32-BIT INS]
+     816                            ; CALL OCCURS {ROM_IntEnable }   ; [] |332| 
+     817                            .dwpsn  file "../Drivers/sensors.c",line 333,column 5,is_stmt,isa 1
+     818 000001a8 2014              MOVS      A1, #20               ; [DPU_3_PIPE] |333|  ; [ORIG 16-BIT INS]
+     819                    $C$DW$55        .dwtag  DW_TAG_TI_branch
+     820                            .dwattr $C$DW$55, DW_AT_low_pc(0x00)
+     821                            .dwattr $C$DW$55, DW_AT_name("ROM_IntEnable")
+     822                            .dwattr $C$DW$55, DW_AT_TI_call
+     823 000001aa FFFEF7FF!         BL        ROM_IntEnable         ; [DPU_3_PIPE] |333|  ; [KEEP 32-BIT INS]
+     824                            ; CALL OCCURS {ROM_IntEnable }   ; [] |333| 
+     825                            .dwpsn  file "../Drivers/sensors.c",line 334,column 1,is_stmt,isa 1
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   16
+
+     826                            .dwcfi  cfa_offset, 8
+     827                    $C$DW$56        .dwtag  DW_TAG_TI_branch
+     828                            .dwattr $C$DW$56, DW_AT_low_pc(0x00)
+     829                            .dwattr $C$DW$56, DW_AT_TI_return
+     830 000001ae BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     831                            ; BRANCH OCCURS                  ; [] 
+     832                            .dwattr $C$DW$39, DW_AT_TI_end_file("../Drivers/sensors.c")
+     833                            .dwattr $C$DW$39, DW_AT_TI_end_line(0x14e)
+     834                            .dwattr $C$DW$39, DW_AT_TI_end_column(0x01)
+     835                            .dwendentry
+     836                            .dwendtag $C$DW$39
+     837                    
+     838 000001b0                   .sect   ".text"
+     839                            .clink
+     840                            .thumbfunc WheelSensorEnable
+     841 000001b0                   .thumb
+     842                            .global WheelSensorEnable
+     843                    
+     844                    $C$DW$57        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorEnable")
+     845                            .dwattr $C$DW$57, DW_AT_low_pc(WheelSensorEnable)
+     846                            .dwattr $C$DW$57, DW_AT_high_pc(0x00)
+     847                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("WheelSensorEnable")
+     848                            .dwattr $C$DW$57, DW_AT_external
+     849                            .dwattr $C$DW$57, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     850                            .dwattr $C$DW$57, DW_AT_TI_begin_line(0x15f)
+     851                            .dwattr $C$DW$57, DW_AT_TI_begin_column(0x01)
+     852                            .dwattr $C$DW$57, DW_AT_decl_file("../Drivers/sensors.c")
+     853                            .dwattr $C$DW$57, DW_AT_decl_line(0x15f)
+     854                            .dwattr $C$DW$57, DW_AT_decl_column(0x01)
+     855                            .dwattr $C$DW$57, DW_AT_TI_max_frame_size(0x08)
+     856                            .dwpsn  file "../Drivers/sensors.c",line 352,column 1,is_stmt,address WheelSensorEnable,isa 1
+     857                    
+     858                            .dwfde $C$DW$CIE, WheelSensorEnable
+     859                    
+     860                    ;*****************************************************************************
+     861                    ;* FUNCTION NAME: WheelSensorEnable                                          *
+     862                    ;*                                                                           *
+     863                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     864                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     865                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     866                    ;*****************************************************************************
+     867 000001b0           WheelSensorEnable:
+     868                    ;* --------------------------------------------------------------------------*
+     869                            .dwcfi  cfa_offset, 0
+     870 000001b0 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     871                            .dwcfi  cfa_offset, 4
+     872                            .dwcfi  save_reg_to_mem, 14, -4
+     873                            .dwcfi  cfa_offset, 8
+     874                            .dwcfi  save_reg_to_mem, 3, -8
+     875                            .dwcfi  cfa_offset, 8
+     876                            .dwpsn  file "../Drivers/sensors.c",line 356,column 5,is_stmt,isa 1
+     877 000001b2 482C              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |356|  ; [ORIG 16-BIT INS]
+     878 000001b4 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |356|  ; [ORIG 16-BIT INS]
+     879 000001b6 2240              MOVS      A3, #64               ; [DPU_3_PIPE] |356|  ; [ORIG 16-BIT INS]
+     880                    $C$DW$58        .dwtag  DW_TAG_TI_branch
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   17
+
+     881                            .dwattr $C$DW$58, DW_AT_low_pc(0x00)
+     882                            .dwattr $C$DW$58, DW_AT_name("ROM_GPIOPinWrite")
+     883                            .dwattr $C$DW$58, DW_AT_TI_call
+     884 000001b8 FFFEF7FF!         BL        ROM_GPIOPinWrite      ; [DPU_3_PIPE] |356|  ; [KEEP 32-BIT INS]
+     885                            ; CALL OCCURS {ROM_GPIOPinWrite }  ; [] |356| 
+     886                            .dwpsn  file "../Drivers/sensors.c",line 358,column 1,is_stmt,isa 1
+     887                            .dwcfi  cfa_offset, 8
+     888                    $C$DW$59        .dwtag  DW_TAG_TI_branch
+     889                            .dwattr $C$DW$59, DW_AT_low_pc(0x00)
+     890                            .dwattr $C$DW$59, DW_AT_TI_return
+     891 000001bc BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     892                            ; BRANCH OCCURS                  ; [] 
+     893                            .dwattr $C$DW$57, DW_AT_TI_end_file("../Drivers/sensors.c")
+     894                            .dwattr $C$DW$57, DW_AT_TI_end_line(0x166)
+     895                            .dwattr $C$DW$57, DW_AT_TI_end_column(0x01)
+     896                            .dwendentry
+     897                            .dwendtag $C$DW$57
+     898                    
+     899 000001be                   .sect   ".text"
+     900                            .clink
+     901                            .thumbfunc WheelSensorDisable
+     902 000001be                   .thumb
+     903                            .global WheelSensorDisable
+     904                    
+     905                    $C$DW$60        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorDisable")
+     906                            .dwattr $C$DW$60, DW_AT_low_pc(WheelSensorDisable)
+     907                            .dwattr $C$DW$60, DW_AT_high_pc(0x00)
+     908                            .dwattr $C$DW$60, DW_AT_TI_symbol_name("WheelSensorDisable")
+     909                            .dwattr $C$DW$60, DW_AT_external
+     910                            .dwattr $C$DW$60, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     911                            .dwattr $C$DW$60, DW_AT_TI_begin_line(0x175)
+     912                            .dwattr $C$DW$60, DW_AT_TI_begin_column(0x01)
+     913                            .dwattr $C$DW$60, DW_AT_decl_file("../Drivers/sensors.c")
+     914                            .dwattr $C$DW$60, DW_AT_decl_line(0x175)
+     915                            .dwattr $C$DW$60, DW_AT_decl_column(0x01)
+     916                            .dwattr $C$DW$60, DW_AT_TI_max_frame_size(0x08)
+     917                            .dwpsn  file "../Drivers/sensors.c",line 374,column 1,is_stmt,address WheelSensorDisable,isa 1
+     918                    
+     919                            .dwfde $C$DW$CIE, WheelSensorDisable
+     920                    
+     921                    ;*****************************************************************************
+     922                    ;* FUNCTION NAME: WheelSensorDisable                                         *
+     923                    ;*                                                                           *
+     924                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     925                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     926                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     927                    ;*****************************************************************************
+     928 000001be           WheelSensorDisable:
+     929                    ;* --------------------------------------------------------------------------*
+     930                            .dwcfi  cfa_offset, 0
+     931 000001be B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     932                            .dwcfi  cfa_offset, 4
+     933                            .dwcfi  save_reg_to_mem, 14, -4
+     934                            .dwcfi  cfa_offset, 8
+     935                            .dwcfi  save_reg_to_mem, 3, -8
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   18
+
+     936                            .dwcfi  cfa_offset, 8
+     937                            .dwpsn  file "../Drivers/sensors.c",line 378,column 5,is_stmt,isa 1
+     938 000001c0 4828              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |378|  ; [ORIG 16-BIT INS]
+     939 000001c2 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |378|  ; [ORIG 16-BIT INS]
+     940 000001c4 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |378|  ; [ORIG 16-BIT INS]
+     941                    $C$DW$61        .dwtag  DW_TAG_TI_branch
+     942                            .dwattr $C$DW$61, DW_AT_low_pc(0x00)
+     943                            .dwattr $C$DW$61, DW_AT_name("ROM_GPIOPinWrite")
+     944                            .dwattr $C$DW$61, DW_AT_TI_call
+     945 000001c6 FFFEF7FF!         BL        ROM_GPIOPinWrite      ; [DPU_3_PIPE] |378|  ; [KEEP 32-BIT INS]
+     946                            ; CALL OCCURS {ROM_GPIOPinWrite }  ; [] |378| 
+     947                            .dwpsn  file "../Drivers/sensors.c",line 379,column 1,is_stmt,isa 1
+     948                            .dwcfi  cfa_offset, 8
+     949                    $C$DW$62        .dwtag  DW_TAG_TI_branch
+     950                            .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+     951                            .dwattr $C$DW$62, DW_AT_TI_return
+     952 000001ca BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     953                            ; BRANCH OCCURS                  ; [] 
+     954                            .dwattr $C$DW$60, DW_AT_TI_end_file("../Drivers/sensors.c")
+     955                            .dwattr $C$DW$60, DW_AT_TI_end_line(0x17b)
+     956                            .dwattr $C$DW$60, DW_AT_TI_end_column(0x01)
+     957                            .dwendentry
+     958                            .dwendtag $C$DW$60
+     959                    
+     960 000001cc                   .sect   ".text"
+     961                            .clink
+     962                            .thumbfunc WheelSensorIntEnable
+     963 000001cc                   .thumb
+     964                            .global WheelSensorIntEnable
+     965                    
+     966                    $C$DW$63        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorIntEnable")
+     967                            .dwattr $C$DW$63, DW_AT_low_pc(WheelSensorIntEnable)
+     968                            .dwattr $C$DW$63, DW_AT_high_pc(0x00)
+     969                            .dwattr $C$DW$63, DW_AT_TI_symbol_name("WheelSensorIntEnable")
+     970                            .dwattr $C$DW$63, DW_AT_external
+     971                            .dwattr $C$DW$63, DW_AT_TI_begin_file("../Drivers/sensors.c")
+     972                            .dwattr $C$DW$63, DW_AT_TI_begin_line(0x18d)
+     973                            .dwattr $C$DW$63, DW_AT_TI_begin_column(0x01)
+     974                            .dwattr $C$DW$63, DW_AT_decl_file("../Drivers/sensors.c")
+     975                            .dwattr $C$DW$63, DW_AT_decl_line(0x18d)
+     976                            .dwattr $C$DW$63, DW_AT_decl_column(0x01)
+     977                            .dwattr $C$DW$63, DW_AT_TI_max_frame_size(0x08)
+     978                            .dwpsn  file "../Drivers/sensors.c",line 398,column 1,is_stmt,address WheelSensorIntEnable,isa
+     979                    
+     980                            .dwfde $C$DW$CIE, WheelSensorIntEnable
+     981                    $C$DW$64        .dwtag  DW_TAG_formal_parameter, DW_AT_name("eWheel")
+     982                            .dwattr $C$DW$64, DW_AT_TI_symbol_name("eWheel")
+     983                            .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$22)
+     984                            .dwattr $C$DW$64, DW_AT_location[DW_OP_reg0]
+     985                    
+     986                    ;*****************************************************************************
+     987                    ;* FUNCTION NAME: WheelSensorIntEnable                                       *
+     988                    ;*                                                                           *
+     989                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     990                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   19
+
+     991                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     992                    ;*****************************************************************************
+     993 000001cc           WheelSensorIntEnable:
+     994                    ;* --------------------------------------------------------------------------*
+     995                            .dwcfi  cfa_offset, 0
+     996 000001cc B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     997                            .dwcfi  cfa_offset, 4
+     998                            .dwcfi  save_reg_to_mem, 14, -4
+     999                            .dwcfi  cfa_offset, 8
+    1000                            .dwcfi  save_reg_to_mem, 3, -8
+    1001                            .dwcfi  cfa_offset, 8
+    1002                    $C$DW$65        .dwtag  DW_TAG_variable, DW_AT_name("eWheel")
+    1003                            .dwattr $C$DW$65, DW_AT_TI_symbol_name("eWheel")
+    1004                            .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$22)
+    1005                            .dwattr $C$DW$65, DW_AT_location[DW_OP_breg13 0]
+    1006 000001ce 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |398|  ; [KEEP 32-BIT INS]
+    1007                            .dwpsn  file "../Drivers/sensors.c",line 407,column 5,is_stmt,isa 1
+    1008 000001d2 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |407|  ; [KEEP 32-BIT INS]
+    1009 000001d6 B940              CBNZ      A1, ||$C$L19||        ; []  ; [ORIG 16-BIT INS]
+    1010                            ; BRANCHCC OCCURS {||$C$L19||}   ; [] |407| 
+    1011                    ;* --------------------------------------------------------------------------*
+    1012                            .dwpsn  file "../Drivers/sensors.c",line 409,column 9,is_stmt,isa 1
+    1013 000001d8 4822              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |409|  ; [ORIG 16-BIT INS]
+    1014 000001da 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |409|  ; [ORIG 16-BIT INS]
+    1015                    $C$DW$66        .dwtag  DW_TAG_TI_branch
+    1016                            .dwattr $C$DW$66, DW_AT_low_pc(0x00)
+    1017                            .dwattr $C$DW$66, DW_AT_name("ROM_GPIOPinIntClear")
+    1018                            .dwattr $C$DW$66, DW_AT_TI_call
+    1019 000001dc FFFEF7FF!         BL        ROM_GPIOPinIntClear   ; [DPU_3_PIPE] |409|  ; [KEEP 32-BIT INS]
+    1020                            ; CALL OCCURS {ROM_GPIOPinIntClear }  ; [] |409| 
+    1021                            .dwpsn  file "../Drivers/sensors.c",line 410,column 9,is_stmt,isa 1
+    1022 000001e0 4820              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |410|  ; [ORIG 16-BIT INS]
+    1023 000001e2 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |410|  ; [ORIG 16-BIT INS]
+    1024                    $C$DW$67        .dwtag  DW_TAG_TI_branch
+    1025                            .dwattr $C$DW$67, DW_AT_low_pc(0x00)
+    1026                            .dwattr $C$DW$67, DW_AT_name("ROM_GPIOPinIntEnable")
+    1027                            .dwattr $C$DW$67, DW_AT_TI_call
+    1028 000001e4 FFFEF7FF!         BL        ROM_GPIOPinIntEnable  ; [DPU_3_PIPE] |410|  ; [KEEP 32-BIT INS]
+    1029                            ; CALL OCCURS {ROM_GPIOPinIntEnable }  ; [] |410| 
+    1030                            .dwpsn  file "../Drivers/sensors.c",line 411,column 5,is_stmt,isa 1
+    1031 000001e8 E007              B         ||$C$L20||            ; [DPU_3_PIPE] |411|  ; [ORIG 16-BIT INS]
+    1032                            ; BRANCH OCCURS {||$C$L20||}     ; [] |411| 
+    1033                    ;* --------------------------------------------------------------------------*
+    1034 000001ea           ||$C$L19||:    
+    1035                            .dwpsn  file "../Drivers/sensors.c",line 414,column 9,is_stmt,isa 1
+    1036 000001ea 481E              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |414|  ; [ORIG 16-BIT INS]
+    1037 000001ec 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |414|  ; [ORIG 16-BIT INS]
+    1038                    $C$DW$68        .dwtag  DW_TAG_TI_branch
+    1039                            .dwattr $C$DW$68, DW_AT_low_pc(0x00)
+    1040                            .dwattr $C$DW$68, DW_AT_name("ROM_GPIOPinIntClear")
+    1041                            .dwattr $C$DW$68, DW_AT_TI_call
+    1042 000001ee FFFEF7FF!         BL        ROM_GPIOPinIntClear   ; [DPU_3_PIPE] |414|  ; [KEEP 32-BIT INS]
+    1043                            ; CALL OCCURS {ROM_GPIOPinIntClear }  ; [] |414| 
+    1044                            .dwpsn  file "../Drivers/sensors.c",line 415,column 9,is_stmt,isa 1
+    1045 000001f2 481C              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |415|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   20
+
+    1046 000001f4 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |415|  ; [ORIG 16-BIT INS]
+    1047                    $C$DW$69        .dwtag  DW_TAG_TI_branch
+    1048                            .dwattr $C$DW$69, DW_AT_low_pc(0x00)
+    1049                            .dwattr $C$DW$69, DW_AT_name("ROM_GPIOPinIntEnable")
+    1050                            .dwattr $C$DW$69, DW_AT_TI_call
+    1051 000001f6 FFFEF7FF!         BL        ROM_GPIOPinIntEnable  ; [DPU_3_PIPE] |415|  ; [KEEP 32-BIT INS]
+    1052                            ; CALL OCCURS {ROM_GPIOPinIntEnable }  ; [] |415| 
+    1053                            .dwpsn  file "../Drivers/sensors.c",line 417,column 1,is_stmt,isa 1
+    1054                    ;* --------------------------------------------------------------------------*
+    1055 000001fa           ||$C$L20||:    
+    1056                            .dwcfi  cfa_offset, 8
+    1057                    $C$DW$70        .dwtag  DW_TAG_TI_branch
+    1058                            .dwattr $C$DW$70, DW_AT_low_pc(0x00)
+    1059                            .dwattr $C$DW$70, DW_AT_TI_return
+    1060 000001fa BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+    1061                            ; BRANCH OCCURS                  ; [] 
+    1062                            .dwattr $C$DW$63, DW_AT_TI_end_file("../Drivers/sensors.c")
+    1063                            .dwattr $C$DW$63, DW_AT_TI_end_line(0x1a1)
+    1064                            .dwattr $C$DW$63, DW_AT_TI_end_column(0x01)
+    1065                            .dwendentry
+    1066                            .dwendtag $C$DW$63
+    1067                    
+    1068 000001fc                   .sect   ".text"
+    1069                            .clink
+    1070                            .thumbfunc WheelSensorIntDisable
+    1071 000001fc                   .thumb
+    1072                            .global WheelSensorIntDisable
+    1073                    
+    1074                    $C$DW$71        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorIntDisable")
+    1075                            .dwattr $C$DW$71, DW_AT_low_pc(WheelSensorIntDisable)
+    1076                            .dwattr $C$DW$71, DW_AT_high_pc(0x00)
+    1077                            .dwattr $C$DW$71, DW_AT_TI_symbol_name("WheelSensorIntDisable")
+    1078                            .dwattr $C$DW$71, DW_AT_external
+    1079                            .dwattr $C$DW$71, DW_AT_TI_begin_file("../Drivers/sensors.c")
+    1080                            .dwattr $C$DW$71, DW_AT_TI_begin_line(0x1b3)
+    1081                            .dwattr $C$DW$71, DW_AT_TI_begin_column(0x01)
+    1082                            .dwattr $C$DW$71, DW_AT_decl_file("../Drivers/sensors.c")
+    1083                            .dwattr $C$DW$71, DW_AT_decl_line(0x1b3)
+    1084                            .dwattr $C$DW$71, DW_AT_decl_column(0x01)
+    1085                            .dwattr $C$DW$71, DW_AT_TI_max_frame_size(0x08)
+    1086                            .dwpsn  file "../Drivers/sensors.c",line 436,column 1,is_stmt,address WheelSensorIntDisable,is
+    1087                    
+    1088                            .dwfde $C$DW$CIE, WheelSensorIntDisable
+    1089                    $C$DW$72        .dwtag  DW_TAG_formal_parameter, DW_AT_name("eWheel")
+    1090                            .dwattr $C$DW$72, DW_AT_TI_symbol_name("eWheel")
+    1091                            .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$22)
+    1092                            .dwattr $C$DW$72, DW_AT_location[DW_OP_reg0]
+    1093                    
+    1094                    ;*****************************************************************************
+    1095                    ;* FUNCTION NAME: WheelSensorIntDisable                                      *
+    1096                    ;*                                                                           *
+    1097                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+    1098                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+    1099                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+    1100                    ;*****************************************************************************
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   21
+
+    1101 000001fc           WheelSensorIntDisable:
+    1102                    ;* --------------------------------------------------------------------------*
+    1103                            .dwcfi  cfa_offset, 0
+    1104 000001fc B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+    1105                            .dwcfi  cfa_offset, 4
+    1106                            .dwcfi  save_reg_to_mem, 14, -4
+    1107                            .dwcfi  cfa_offset, 8
+    1108                            .dwcfi  save_reg_to_mem, 3, -8
+    1109                            .dwcfi  cfa_offset, 8
+    1110                    $C$DW$73        .dwtag  DW_TAG_variable, DW_AT_name("eWheel")
+    1111                            .dwattr $C$DW$73, DW_AT_TI_symbol_name("eWheel")
+    1112                            .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$22)
+    1113                            .dwattr $C$DW$73, DW_AT_location[DW_OP_breg13 0]
+    1114 000001fe 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |436|  ; [KEEP 32-BIT INS]
+    1115                            .dwpsn  file "../Drivers/sensors.c",line 445,column 5,is_stmt,isa 1
+    1116 00000202 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |445|  ; [KEEP 32-BIT INS]
+    1117 00000206 B920              CBNZ      A1, ||$C$L21||        ; []  ; [ORIG 16-BIT INS]
+    1118                            ; BRANCHCC OCCURS {||$C$L21||}   ; [] |445| 
+    1119                    ;* --------------------------------------------------------------------------*
+    1120                            .dwpsn  file "../Drivers/sensors.c",line 447,column 9,is_stmt,isa 1
+    1121 00000208 4816              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |447|  ; [ORIG 16-BIT INS]
+    1122 0000020a 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |447|  ; [ORIG 16-BIT INS]
+    1123                    $C$DW$74        .dwtag  DW_TAG_TI_branch
+    1124                            .dwattr $C$DW$74, DW_AT_low_pc(0x00)
+    1125                            .dwattr $C$DW$74, DW_AT_name("ROM_GPIOPinIntDisable")
+    1126                            .dwattr $C$DW$74, DW_AT_TI_call
+    1127 0000020c FFFEF7FF!         BL        ROM_GPIOPinIntDisable ; [DPU_3_PIPE] |447|  ; [KEEP 32-BIT INS]
+    1128                            ; CALL OCCURS {ROM_GPIOPinIntDisable }  ; [] |447| 
+    1129                            .dwpsn  file "../Drivers/sensors.c",line 448,column 5,is_stmt,isa 1
+    1130 00000210 E003              B         ||$C$L22||            ; [DPU_3_PIPE] |448|  ; [ORIG 16-BIT INS]
+    1131                            ; BRANCH OCCURS {||$C$L22||}     ; [] |448| 
+    1132                    ;* --------------------------------------------------------------------------*
+    1133 00000212           ||$C$L21||:    
+    1134                            .dwpsn  file "../Drivers/sensors.c",line 451,column 9,is_stmt,isa 1
+    1135 00000212 4814              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |451|  ; [ORIG 16-BIT INS]
+    1136 00000214 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |451|  ; [ORIG 16-BIT INS]
+    1137                    $C$DW$75        .dwtag  DW_TAG_TI_branch
+    1138                            .dwattr $C$DW$75, DW_AT_low_pc(0x00)
+    1139                            .dwattr $C$DW$75, DW_AT_name("ROM_GPIOPinIntDisable")
+    1140                            .dwattr $C$DW$75, DW_AT_TI_call
+    1141 00000216 FFFEF7FF!         BL        ROM_GPIOPinIntDisable ; [DPU_3_PIPE] |451|  ; [KEEP 32-BIT INS]
+    1142                            ; CALL OCCURS {ROM_GPIOPinIntDisable }  ; [] |451| 
+    1143                            .dwpsn  file "../Drivers/sensors.c",line 453,column 1,is_stmt,isa 1
+    1144                    ;* --------------------------------------------------------------------------*
+    1145 0000021a           ||$C$L22||:    
+    1146                            .dwcfi  cfa_offset, 8
+    1147                    $C$DW$76        .dwtag  DW_TAG_TI_branch
+    1148                            .dwattr $C$DW$76, DW_AT_low_pc(0x00)
+    1149                            .dwattr $C$DW$76, DW_AT_TI_return
+    1150 0000021a BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+    1151                            ; BRANCH OCCURS                  ; [] 
+    1152                            .dwattr $C$DW$71, DW_AT_TI_end_file("../Drivers/sensors.c")
+    1153                            .dwattr $C$DW$71, DW_AT_TI_end_line(0x1c5)
+    1154                            .dwattr $C$DW$71, DW_AT_TI_end_column(0x01)
+    1155                            .dwendentry
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   22
+
+    1156                            .dwendtag $C$DW$71
+    1157                    
+    1158                    ;******************************************************************************
+    1159                    ;* CONSTANT TABLE                                                             *
+    1160                    ;******************************************************************************
+    1161 0000021c                   .sect   ".text"
+    1162                            .align  4
+    1163 0000021c 20000010  ||$C$CON1||:    .field  536870928,32
+    1164 00000220                   .sect   ".text"
+    1165                            .clink
+    1166                            .thumbfunc WheelSensorIntHandler
+    1167 00000220                   .thumb
+    1168                            .global WheelSensorIntHandler
+    1169                    
+    1170                    $C$DW$77        .dwtag  DW_TAG_subprogram, DW_AT_name("WheelSensorIntHandler")
+    1171                            .dwattr $C$DW$77, DW_AT_low_pc(WheelSensorIntHandler)
+    1172                            .dwattr $C$DW$77, DW_AT_high_pc(0x00)
+    1173                            .dwattr $C$DW$77, DW_AT_TI_symbol_name("WheelSensorIntHandler")
+    1174                            .dwattr $C$DW$77, DW_AT_external
+    1175                            .dwattr $C$DW$77, DW_AT_TI_begin_file("../Drivers/sensors.c")
+    1176                            .dwattr $C$DW$77, DW_AT_TI_begin_line(0x1dc)
+    1177                            .dwattr $C$DW$77, DW_AT_TI_begin_column(0x01)
+    1178                            .dwattr $C$DW$77, DW_AT_decl_file("../Drivers/sensors.c")
+    1179                            .dwattr $C$DW$77, DW_AT_decl_line(0x1dc)
+    1180                            .dwattr $C$DW$77, DW_AT_decl_column(0x01)
+    1181                            .dwattr $C$DW$77, DW_AT_TI_max_frame_size(0x10)
+    1182                            .dwpsn  file "../Drivers/sensors.c",line 477,column 1,is_stmt,address WheelSensorIntHandler,is
+    1183                    
+    1184                            .dwfde $C$DW$CIE, WheelSensorIntHandler
+    1185                    
+    1186                    ;*****************************************************************************
+    1187                    ;* FUNCTION NAME: WheelSensorIntHandler                                      *
+    1188                    ;*                                                                           *
+    1189                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+    1190                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+    1191                    ;*   Local Frame Size  : 0 Args + 8 Auto + 4 Save = 12 byte                  *
+    1192                    ;*****************************************************************************
+    1193 00000220           WheelSensorIntHandler:
+    1194                    ;* --------------------------------------------------------------------------*
+    1195                            .dwcfi  cfa_offset, 0
+    1196 00000220 B50E              PUSH      {A2, A3, A4, LR}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+    1197                            .dwcfi  cfa_offset, 4
+    1198                            .dwcfi  save_reg_to_mem, 14, -4
+    1199                            .dwcfi  cfa_offset, 8
+    1200                            .dwcfi  save_reg_to_mem, 3, -8
+    1201                            .dwcfi  cfa_offset, 12
+    1202                            .dwcfi  save_reg_to_mem, 2, -12
+    1203                            .dwcfi  cfa_offset, 16
+    1204                            .dwcfi  save_reg_to_mem, 1, -16
+    1205                            .dwcfi  cfa_offset, 16
+    1206                    $C$DW$78        .dwtag  DW_TAG_variable, DW_AT_name("ulStatus")
+    1207                            .dwattr $C$DW$78, DW_AT_TI_symbol_name("ulStatus")
+    1208                            .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$13)
+    1209                            .dwattr $C$DW$78, DW_AT_location[DW_OP_breg13 0]
+    1210                    $C$DW$79        .dwtag  DW_TAG_variable, DW_AT_name("ulLoop")
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   23
+
+    1211                            .dwattr $C$DW$79, DW_AT_TI_symbol_name("ulLoop")
+    1212                            .dwattr $C$DW$79, DW_AT_type(*$C$DW$T$13)
+    1213                            .dwattr $C$DW$79, DW_AT_location[DW_OP_breg13 4]
+    1214                            .dwpsn  file "../Drivers/sensors.c",line 483,column 5,is_stmt,isa 1
+    1215 00000222 4810              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |483|  ; [ORIG 16-BIT INS]
+    1216 00000224 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |483|  ; [ORIG 16-BIT INS]
+    1217                    $C$DW$80        .dwtag  DW_TAG_TI_branch
+    1218                            .dwattr $C$DW$80, DW_AT_low_pc(0x00)
+    1219                            .dwattr $C$DW$80, DW_AT_name("ROM_GPIOPinIntStatus")
+    1220                            .dwattr $C$DW$80, DW_AT_TI_call
+    1221 00000226 FFFEF7FF!         BL        ROM_GPIOPinIntStatus  ; [DPU_3_PIPE] |483|  ; [KEEP 32-BIT INS]
+    1222                            ; CALL OCCURS {ROM_GPIOPinIntStatus }  ; [] |483| 
+    1223 0000022a 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |483|  ; [ORIG 16-BIT INS]
+    1224                            .dwpsn  file "../Drivers/sensors.c",line 484,column 5,is_stmt,isa 1
+    1225 0000022c 9800              LDR       A1, [SP, #0]          ; [DPU_3_PIPE] |484|  ; [ORIG 16-BIT INS]
+    1226 0000022e 0900              LSRS      A1, A1, #4            ; [DPU_3_PIPE] |484|  ; [ORIG 16-BIT INS]
+    1227 00000230 D31E              BCC       ||$C$L26||            ; [DPU_3_PIPE] |484|  ; [ORIG 16-BIT INS]
+    1228                            ; BRANCHCC OCCURS {||$C$L26||}   ; [] |484| 
+    1229                    ;* --------------------------------------------------------------------------*
+    1230                            .dwpsn  file "../Drivers/sensors.c",line 489,column 9,is_stmt,isa 1
+    1231 00000232 480C              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |489|  ; [ORIG 16-BIT INS]
+    1232 00000234 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |489|  ; [ORIG 16-BIT INS]
+    1233                    $C$DW$81        .dwtag  DW_TAG_TI_branch
+    1234                            .dwattr $C$DW$81, DW_AT_low_pc(0x00)
+    1235                            .dwattr $C$DW$81, DW_AT_name("ROM_GPIOPinIntClear")
+    1236                            .dwattr $C$DW$81, DW_AT_TI_call
+    1237 00000236 FFFEF7FF!         BL        ROM_GPIOPinIntClear   ; [DPU_3_PIPE] |489|  ; [KEEP 32-BIT INS]
+    1238                            ; CALL OCCURS {ROM_GPIOPinIntClear }  ; [] |489| 
+    1239                            .dwpsn  file "../Drivers/sensors.c",line 497,column 14,is_stmt,isa 1
+    1240 0000023a 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1241 0000023c 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1242                            .dwpsn  file "../Drivers/sensors.c",line 497,column 26,is_stmt,isa 1
+    1243 0000023e 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1244 00000240 2864              CMP       A1, #100              ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1245 00000242 D20B              BCS       ||$C$L24||            ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1246                            ; BRANCHCC OCCURS {||$C$L24||}   ; [] |497| 
+    1247                    ;* --------------------------------------------------------------------------*
+    1248                    ;*   BEGIN LOOP ||$C$L23||
+    1249                    ;*
+    1250                    ;*   Loop source line                : 497
+    1251                    ;*   Loop closing brace source line  : 503
+    1252                    ;*   Known Minimum Trip Count        : 1
+    1253                    ;*   Known Maximum Trip Count        : 4294967295
+    1254                    ;*   Known Max Trip Count Factor     : 1
+    1255                    ;* --------------------------------------------------------------------------*
+    1256 00000244           ||$C$L23||:    
+    1257 00000244           $C$DW$L$WheelSensorIntHandler$3$B:
+    1258                            .dwpsn  file "../Drivers/sensors.c",line 499,column 13,is_stmt,isa 1
+    1259 00000244 4807              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |499|  ; [ORIG 16-BIT INS]
+    1260 00000246 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |499|  ; [ORIG 16-BIT INS]
+    1261                    $C$DW$82        .dwtag  DW_TAG_TI_branch
+    1262                            .dwattr $C$DW$82, DW_AT_low_pc(0x00)
+    1263                            .dwattr $C$DW$82, DW_AT_name("ROM_GPIOPinRead")
+    1264                            .dwattr $C$DW$82, DW_AT_TI_call
+    1265 00000248 FFFEF7FF!         BL        ROM_GPIOPinRead       ; [DPU_3_PIPE] |499|  ; [KEEP 32-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   24
+
+    1266                            ; CALL OCCURS {ROM_GPIOPinRead }  ; [] |499| 
+    1267 0000024c 2800              CMP       A1, #0                ; [DPU_3_PIPE] |499|  ; [ORIG 16-BIT INS]
+    1268 0000024e D032              BEQ       ||$C$L29||            ; [DPU_3_PIPE] |499|  ; [ORIG 16-BIT INS]
+    1269                            ; BRANCHCC OCCURS {||$C$L29||}   ; [] |499| 
+    1270 00000250           $C$DW$L$WheelSensorIntHandler$3$E:
+    1271                    ;* --------------------------------------------------------------------------*
+    1272 00000250           $C$DW$L$WheelSensorIntHandler$4$B:
+    1273                            .dwpsn  file "../Drivers/sensors.c",line 501,column 17,is_stmt,isa 1
+    1274                            .dwpsn  file "../Drivers/sensors.c",line 497,column 40,is_stmt,isa 1
+    1275 00000250 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1276 00000252 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1277 00000254 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1278                            .dwpsn  file "../Drivers/sensors.c",line 497,column 26,is_stmt,isa 1
+    1279 00000256 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1280 00000258 2864              CMP       A1, #100              ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1281 0000025a D3F3              BCC       ||$C$L23||            ; [DPU_3_PIPE] |497|  ; [ORIG 16-BIT INS]
+    1282                            ; BRANCHCC OCCURS {||$C$L23||}   ; [] |497| 
+    1283 0000025c           $C$DW$L$WheelSensorIntHandler$4$E:
+    1284                    ;* --------------------------------------------------------------------------*
+    1285 0000025c           ||$C$L24||:    
+    1286                            .dwpsn  file "../Drivers/sensors.c",line 508,column 9,is_stmt,isa 1
+    1287 0000025c 4819              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |508|  ; [ORIG 16-BIT INS]
+    1288 0000025e 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |508|  ; [ORIG 16-BIT INS]
+    1289 00000260 B130              CBZ       A1, ||$C$L26||        ; []  ; [ORIG 16-BIT INS]
+    1290                            ; BRANCHCC OCCURS {||$C$L26||}   ; [] |508| 
+    1291                    ;* --------------------------------------------------------------------------*
+    1292 00000262 E001              B         ||$C$L25||            ; []  ; [ORIG 16-BIT INS]
+    1293                            ; BRANCH OCCURS {||$C$L25||}     ; [] 
+    1294                    ;******************************************************************************
+    1295                    ;* CONSTANT TABLE                                                             *
+    1296                    ;******************************************************************************
+    1297 00000264                   .sect   ".text"
+    1298                            .align  4
+    1299 00000264 40024000  ||$C$CON2||:    .field  1073889280,32
+    1300                    ;* --------------------------------------------------------------------------*
+    1301 00000268           ||$C$L25||:    
+    1302                            .dwpsn  file "../Drivers/sensors.c",line 510,column 13,is_stmt,isa 1
+    1303 00000268 4816              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |510|  ; [ORIG 16-BIT INS]
+    1304 0000026a 6801              LDR       A2, [A1, #0]          ; [DPU_3_PIPE] |510|  ; [ORIG 16-BIT INS]
+    1305 0000026c 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |510|  ; [ORIG 16-BIT INS]
+    1306                    $C$DW$83        .dwtag  DW_TAG_TI_branch
+    1307                            .dwattr $C$DW$83, DW_AT_low_pc(0x00)
+    1308                            .dwattr $C$DW$83, DW_AT_TI_call
+    1309                            .dwattr $C$DW$83, DW_AT_TI_indirect
+    1310 0000026e 4788              BLX       A2                    ; [DPU_3_PIPE] |510|  ; [ORIG 16-BIT INS]
+    1311                            ; CALL OCCURS {}                 ; [] |510| 
+    1312                    ;* --------------------------------------------------------------------------*
+    1313 00000270           ||$C$L26||:    
+    1314                            .dwpsn  file "../Drivers/sensors.c",line 517,column 5,is_stmt,isa 1
+    1315 00000270 4815              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |517|  ; [ORIG 16-BIT INS]
+    1316 00000272 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |517|  ; [ORIG 16-BIT INS]
+    1317                    $C$DW$84        .dwtag  DW_TAG_TI_branch
+    1318                            .dwattr $C$DW$84, DW_AT_low_pc(0x00)
+    1319                            .dwattr $C$DW$84, DW_AT_name("ROM_GPIOPinIntStatus")
+    1320                            .dwattr $C$DW$84, DW_AT_TI_call
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   25
+
+    1321 00000274 FFFEF7FF!         BL        ROM_GPIOPinIntStatus  ; [DPU_3_PIPE] |517|  ; [KEEP 32-BIT INS]
+    1322                            ; CALL OCCURS {ROM_GPIOPinIntStatus }  ; [] |517| 
+    1323 00000278 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |517|  ; [ORIG 16-BIT INS]
+    1324                            .dwpsn  file "../Drivers/sensors.c",line 518,column 5,is_stmt,isa 1
+    1325 0000027a 9800              LDR       A1, [SP, #0]          ; [DPU_3_PIPE] |518|  ; [ORIG 16-BIT INS]
+    1326 0000027c 08C0              LSRS      A1, A1, #3            ; [DPU_3_PIPE] |518|  ; [ORIG 16-BIT INS]
+    1327 0000027e D31A              BCC       ||$C$L29||            ; [DPU_3_PIPE] |518|  ; [ORIG 16-BIT INS]
+    1328                            ; BRANCHCC OCCURS {||$C$L29||}   ; [] |518| 
+    1329                    ;* --------------------------------------------------------------------------*
+    1330                            .dwpsn  file "../Drivers/sensors.c",line 523,column 9,is_stmt,isa 1
+    1331 00000280 4811              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |523|  ; [ORIG 16-BIT INS]
+    1332 00000282 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |523|  ; [ORIG 16-BIT INS]
+    1333                    $C$DW$85        .dwtag  DW_TAG_TI_branch
+    1334                            .dwattr $C$DW$85, DW_AT_low_pc(0x00)
+    1335                            .dwattr $C$DW$85, DW_AT_name("ROM_GPIOPinIntClear")
+    1336                            .dwattr $C$DW$85, DW_AT_TI_call
+    1337 00000284 FFFEF7FF!         BL        ROM_GPIOPinIntClear   ; [DPU_3_PIPE] |523|  ; [KEEP 32-BIT INS]
+    1338                            ; CALL OCCURS {ROM_GPIOPinIntClear }  ; [] |523| 
+    1339                            .dwpsn  file "../Drivers/sensors.c",line 531,column 14,is_stmt,isa 1
+    1340 00000288 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1341 0000028a 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1342                            .dwpsn  file "../Drivers/sensors.c",line 531,column 26,is_stmt,isa 1
+    1343 0000028c 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1344 0000028e 2864              CMP       A1, #100              ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1345 00000290 D20A              BCS       ||$C$L28||            ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1346                            ; BRANCHCC OCCURS {||$C$L28||}   ; [] |531| 
+    1347                    ;* --------------------------------------------------------------------------*
+    1348                    ;*   BEGIN LOOP ||$C$L27||
+    1349                    ;*
+    1350                    ;*   Loop source line                : 531
+    1351                    ;*   Loop closing brace source line  : 537
+    1352                    ;*   Known Minimum Trip Count        : 1
+    1353                    ;*   Known Maximum Trip Count        : 4294967295
+    1354                    ;*   Known Max Trip Count Factor     : 1
+    1355                    ;* --------------------------------------------------------------------------*
+    1356 00000292           ||$C$L27||:    
+    1357 00000292           $C$DW$L$WheelSensorIntHandler$10$B:
+    1358                            .dwpsn  file "../Drivers/sensors.c",line 533,column 13,is_stmt,isa 1
+    1359 00000292 480D              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |533|  ; [ORIG 16-BIT INS]
+    1360 00000294 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |533|  ; [ORIG 16-BIT INS]
+    1361                    $C$DW$86        .dwtag  DW_TAG_TI_branch
+    1362                            .dwattr $C$DW$86, DW_AT_low_pc(0x00)
+    1363                            .dwattr $C$DW$86, DW_AT_name("ROM_GPIOPinRead")
+    1364                            .dwattr $C$DW$86, DW_AT_TI_call
+    1365 00000296 FFFEF7FF!         BL        ROM_GPIOPinRead       ; [DPU_3_PIPE] |533|  ; [KEEP 32-BIT INS]
+    1366                            ; CALL OCCURS {ROM_GPIOPinRead }  ; [] |533| 
+    1367 0000029a B160              CBZ       A1, ||$C$L29||        ; []  ; [ORIG 16-BIT INS]
+    1368                            ; BRANCHCC OCCURS {||$C$L29||}   ; [] |533| 
+    1369 0000029c           $C$DW$L$WheelSensorIntHandler$10$E:
+    1370                    ;* --------------------------------------------------------------------------*
+    1371 0000029c           $C$DW$L$WheelSensorIntHandler$11$B:
+    1372                            .dwpsn  file "../Drivers/sensors.c",line 535,column 17,is_stmt,isa 1
+    1373                            .dwpsn  file "../Drivers/sensors.c",line 531,column 40,is_stmt,isa 1
+    1374 0000029c 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1375 0000029e 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   26
+
+    1376 000002a0 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1377                            .dwpsn  file "../Drivers/sensors.c",line 531,column 26,is_stmt,isa 1
+    1378 000002a2 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1379 000002a4 2864              CMP       A1, #100              ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1380 000002a6 D3F4              BCC       ||$C$L27||            ; [DPU_3_PIPE] |531|  ; [ORIG 16-BIT INS]
+    1381                            ; BRANCHCC OCCURS {||$C$L27||}   ; [] |531| 
+    1382 000002a8           $C$DW$L$WheelSensorIntHandler$11$E:
+    1383                    ;* --------------------------------------------------------------------------*
+    1384 000002a8           ||$C$L28||:    
+    1385                            .dwpsn  file "../Drivers/sensors.c",line 542,column 9,is_stmt,isa 1
+    1386 000002a8 4806              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |542|  ; [ORIG 16-BIT INS]
+    1387 000002aa 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |542|  ; [ORIG 16-BIT INS]
+    1388 000002ac B118              CBZ       A1, ||$C$L29||        ; []  ; [ORIG 16-BIT INS]
+    1389                            ; BRANCHCC OCCURS {||$C$L29||}   ; [] |542| 
+    1390                    ;* --------------------------------------------------------------------------*
+    1391                            .dwpsn  file "../Drivers/sensors.c",line 544,column 13,is_stmt,isa 1
+    1392 000002ae 4805              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |544|  ; [ORIG 16-BIT INS]
+    1393 000002b0 6801              LDR       A2, [A1, #0]          ; [DPU_3_PIPE] |544|  ; [ORIG 16-BIT INS]
+    1394 000002b2 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |544|  ; [ORIG 16-BIT INS]
+    1395                    $C$DW$87        .dwtag  DW_TAG_TI_branch
+    1396                            .dwattr $C$DW$87, DW_AT_low_pc(0x00)
+    1397                            .dwattr $C$DW$87, DW_AT_TI_call
+    1398                            .dwattr $C$DW$87, DW_AT_TI_indirect
+    1399 000002b4 4788              BLX       A2                    ; [DPU_3_PIPE] |544|  ; [ORIG 16-BIT INS]
+    1400                            ; CALL OCCURS {}                 ; [] |544| 
+    1401                            .dwpsn  file "../Drivers/sensors.c",line 547,column 1,is_stmt,isa 1
+    1402                    ;* --------------------------------------------------------------------------*
+    1403 000002b6           ||$C$L29||:    
+    1404                            .dwcfi  cfa_offset, 16
+    1405                    $C$DW$88        .dwtag  DW_TAG_TI_branch
+    1406                            .dwattr $C$DW$88, DW_AT_low_pc(0x00)
+    1407                            .dwattr $C$DW$88, DW_AT_TI_return
+    1408 000002b6 BD0E              POP       {A2, A3, A4, PC}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+    1409                            ; BRANCH OCCURS                  ; [] 
+    1410                    
+    1411                    $C$DW$89        .dwtag  DW_TAG_TI_loop
+    1412                            .dwattr $C$DW$89, DW_AT_name("C:\Projects\TI_ARM_Projects\FreeRTOS_EvalBot\Debug\sensors.asm:$
+    1413                            .dwattr $C$DW$89, DW_AT_TI_begin_file("../Drivers/sensors.c")
+    1414                            .dwattr $C$DW$89, DW_AT_TI_begin_line(0x213)
+    1415                            .dwattr $C$DW$89, DW_AT_TI_end_line(0x219)
+    1416                    $C$DW$90        .dwtag  DW_TAG_TI_loop_range
+    1417                            .dwattr $C$DW$90, DW_AT_low_pc($C$DW$L$WheelSensorIntHandler$10$B)
+    1418                            .dwattr $C$DW$90, DW_AT_high_pc($C$DW$L$WheelSensorIntHandler$10$E)
+    1419                    $C$DW$91        .dwtag  DW_TAG_TI_loop_range
+    1420                            .dwattr $C$DW$91, DW_AT_low_pc($C$DW$L$WheelSensorIntHandler$11$B)
+    1421                            .dwattr $C$DW$91, DW_AT_high_pc($C$DW$L$WheelSensorIntHandler$11$E)
+    1422                            .dwendtag $C$DW$89
+    1423                    
+    1424                    
+    1425                    $C$DW$92        .dwtag  DW_TAG_TI_loop
+    1426                            .dwattr $C$DW$92, DW_AT_name("C:\Projects\TI_ARM_Projects\FreeRTOS_EvalBot\Debug\sensors.asm:$
+    1427                            .dwattr $C$DW$92, DW_AT_TI_begin_file("../Drivers/sensors.c")
+    1428                            .dwattr $C$DW$92, DW_AT_TI_begin_line(0x1f1)
+    1429                            .dwattr $C$DW$92, DW_AT_TI_end_line(0x1f7)
+    1430                    $C$DW$93        .dwtag  DW_TAG_TI_loop_range
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   27
+
+    1431                            .dwattr $C$DW$93, DW_AT_low_pc($C$DW$L$WheelSensorIntHandler$3$B)
+    1432                            .dwattr $C$DW$93, DW_AT_high_pc($C$DW$L$WheelSensorIntHandler$3$E)
+    1433                    $C$DW$94        .dwtag  DW_TAG_TI_loop_range
+    1434                            .dwattr $C$DW$94, DW_AT_low_pc($C$DW$L$WheelSensorIntHandler$4$B)
+    1435                            .dwattr $C$DW$94, DW_AT_high_pc($C$DW$L$WheelSensorIntHandler$4$E)
+    1436                            .dwendtag $C$DW$92
+    1437                    
+    1438                            .dwattr $C$DW$77, DW_AT_TI_end_file("../Drivers/sensors.c")
+    1439                            .dwattr $C$DW$77, DW_AT_TI_end_line(0x223)
+    1440                            .dwattr $C$DW$77, DW_AT_TI_end_column(0x01)
+    1441                            .dwendentry
+    1442                            .dwendtag $C$DW$77
+    1443                    
+    1444                    ;******************************************************************************
+    1445                    ;* CONSTANT TABLE                                                             *
+    1446                    ;******************************************************************************
+    1447 000002b8                   .sect   ".text"
+    1448                            .align  4
+    1449 000002b8 00000000! ||$C$CON3||:    .field  g_ucDebouncedBumpers,32
+    1450                            .align  4
+    1451 000002bc 00000000! ||$C$CON4||:    .field  ucBumperClockA$1,32
+    1452                            .align  4
+    1453 000002c0 00000000! ||$C$CON5||:    .field  ucBumperClockB$2,32
+    1454                            .align  4
+    1455 000002c4 00000000! ||$C$CON6||:    .field  g_pfnWheelCallback,32
+    1456                            .align  4
+    1457 000002c8 40024000  ||$C$CON7||:    .field  1073889280,32
+    1458                    ;*****************************************************************************
+    1459                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+    1460                    ;*****************************************************************************
+    1461                            .global ROM_SysCtlPeripheralEnable
+    1462                            .global ROM_GPIOPinTypeGPIOInput
+    1463                            .global ROM_GPIOPadConfigSet
+    1464                            .global ROM_GPIOPinRead
+    1465                            .global ROM_GPIOPinTypeGPIOOutput
+    1466                            .global ROM_GPIOPinWrite
+    1467                            .global ROM_GPIOPinIntDisable
+    1468                            .global ROM_GPIOIntTypeSet
+    1469                            .global ROM_IntEnable
+    1470                            .global ROM_GPIOPinIntClear
+    1471                            .global ROM_GPIOPinIntEnable
+    1472                            .global ROM_GPIOPinIntStatus
+    1473                    
+    1474                    ;******************************************************************************
+    1475                    ;* BUILD ATTRIBUTES                                                           *
+    1476                    ;******************************************************************************
+    1477                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+    1478                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+    1479                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+    1480                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+    1481                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+    1482                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(1)
+    1483                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+    1484                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+    1485                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   28
+
+    1486                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+    1487                    
+    1488                    ;******************************************************************************
+    1489                    ;* TYPE INFORMATION                                                           *
+    1490                    ;******************************************************************************
+    1491                    
+    1492                    $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+    1493                            .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+    1494                    $C$DW$95        .dwtag  DW_TAG_enumerator, DW_AT_name("BUMP_LEFT"), DW_AT_const_value(0x00)
+    1495                            .dwattr $C$DW$95, DW_AT_decl_file("..\Drivers\sensors.h")
+    1496                            .dwattr $C$DW$95, DW_AT_decl_line(0x38)
+    1497                            .dwattr $C$DW$95, DW_AT_decl_column(0x05)
+    1498                    $C$DW$96        .dwtag  DW_TAG_enumerator, DW_AT_name("BUMP_RIGHT"), DW_AT_const_value(0x01)
+    1499                            .dwattr $C$DW$96, DW_AT_decl_file("..\Drivers\sensors.h")
+    1500                            .dwattr $C$DW$96, DW_AT_decl_line(0x3d)
+    1501                            .dwattr $C$DW$96, DW_AT_decl_column(0x05)
+    1502                            .dwendtag $C$DW$T$19
+    1503                    
+    1504                            .dwattr $C$DW$T$19, DW_AT_decl_file("..\Drivers\sensors.h")
+    1505                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x34)
+    1506                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+    1507                    $C$DW$T$20      .dwtag  DW_TAG_typedef, DW_AT_name("tBumper")
+    1508                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+    1509                            .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+    1510                            .dwattr $C$DW$T$20, DW_AT_decl_file("..\Drivers\sensors.h")
+    1511                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x3f)
+    1512                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x01)
+    1513                    
+    1514                    $C$DW$T$21      .dwtag  DW_TAG_enumeration_type
+    1515                            .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1516                    $C$DW$97        .dwtag  DW_TAG_enumerator, DW_AT_name("WHEEL_LEFT"), DW_AT_const_value(0x00)
+    1517                            .dwattr $C$DW$97, DW_AT_decl_file("..\Drivers\sensors.h")
+    1518                            .dwattr $C$DW$97, DW_AT_decl_line(0x4b)
+    1519                            .dwattr $C$DW$97, DW_AT_decl_column(0x05)
+    1520                    $C$DW$98        .dwtag  DW_TAG_enumerator, DW_AT_name("WHEEL_RIGHT"), DW_AT_const_value(0x01)
+    1521                            .dwattr $C$DW$98, DW_AT_decl_file("..\Drivers\sensors.h")
+    1522                            .dwattr $C$DW$98, DW_AT_decl_line(0x50)
+    1523                            .dwattr $C$DW$98, DW_AT_decl_column(0x05)
+    1524                            .dwendtag $C$DW$T$21
+    1525                    
+    1526                            .dwattr $C$DW$T$21, DW_AT_decl_file("..\Drivers\sensors.h")
+    1527                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x47)
+    1528                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x01)
+    1529                    $C$DW$T$22      .dwtag  DW_TAG_typedef, DW_AT_name("tWheel")
+    1530                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1531                            .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+    1532                            .dwattr $C$DW$T$22, DW_AT_decl_file("..\Drivers\sensors.h")
+    1533                            .dwattr $C$DW$T$22, DW_AT_decl_line(0x52)
+    1534                            .dwattr $C$DW$T$22, DW_AT_decl_column(0x01)
+    1535                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1536                            .dwattr $C$DW$T$2, DW_AT_name("void")
+    1537                    
+    1538                    $C$DW$T$24      .dwtag  DW_TAG_subroutine_type
+    1539                            .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+    1540                    $C$DW$99        .dwtag  DW_TAG_formal_parameter
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   29
+
+    1541                            .dwattr $C$DW$99, DW_AT_type(*$C$DW$T$22)
+    1542                            .dwendtag $C$DW$T$24
+    1543                    
+    1544                    $C$DW$T$25      .dwtag  DW_TAG_pointer_type
+    1545                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+    1546                            .dwattr $C$DW$T$25, DW_AT_address_class(0x20)
+    1547                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1548                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1549                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1550                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1551                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1552                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1553                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1554                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1555                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1556                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1557                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1558                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1559                    $C$DW$T$27      .dwtag  DW_TAG_typedef, DW_AT_name("tBoolean")
+    1560                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$6)
+    1561                            .dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+    1562                            .dwattr $C$DW$T$27, DW_AT_decl_file("C:/Tools/StellarisWare_EvalBot/inc/hw_types.h")
+    1563                            .dwattr $C$DW$T$27, DW_AT_decl_line(0x21)
+    1564                            .dwattr $C$DW$T$27, DW_AT_decl_column(0x17)
+    1565                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1566                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1567                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1568                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1569                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1570                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1571                            .dwattr $C$DW$T$8, DW_AT_name("short")
+    1572                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+    1573                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1574                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1575                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1576                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+    1577                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1578                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1579                            .dwattr $C$DW$T$10, DW_AT_name("int")
+    1580                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+    1581                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1582                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1583                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1584                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+    1585                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1586                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1587                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1588                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1589                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1590                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1591                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1592                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1593                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1594                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1595                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+TI ARM Assembler PC v5.0.4 Sat Aug 03 12:01:35 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+sensors.asm                                                          PAGE   30
+
+    1596                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1597                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1598                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1599                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1600                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1601                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1602                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1603                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1604                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1605                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1606                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1607                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1608                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1609                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1610                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1611                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1612                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1613                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1614                    
+    1615                    ;***************************************************************
+    1616                    ;* DWARF CIE ENTRIES                                           *
+    1617                    ;***************************************************************
+    1618                    
+    1619                    $C$DW$CIE       .dwcie 14
+    1620                            .dwcfi  cfa_register, 13
+    1621                            .dwcfi  cfa_offset, 0
+    1622                            .dwcfi  undefined, 0
+    1623                            .dwcfi  undefined, 1
+    1624                            .dwcfi  undefined, 2
+    1625                            .dwcfi  undefined, 3
+    1626                            .dwcfi  same_value, 4
+    1627                            .dwcfi  same_value, 5
+    1628                            .dwcfi  same_value, 6
+    1629                            .dwcfi  same_value, 7
+    1630                            .dwcfi  same_value, 8
+    1631                            .dwcfi  same_value, 9
+    1632                            .dwcfi  same_value, 10
+    1633                            .dwcfi  same_value, 11
+    1634                            .dwcfi  undefined, 12
+    1635                            .dwcfi  undefined, 13
+    1636                            .dwcfi  undefined, 14
+    1637                            .dwcfi  undefined, 14
+    1638                            .dwcfi  undefined, 7
+    1639                            .dwendentry
+    1640                            .dwendtag $C$DW$CU
+    1641                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 260 (82%)
+Number of Thumb2 ins encoded as Thumb2 = 57 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 92
+
+
+No Assembly Errors, No Assembly Warnings

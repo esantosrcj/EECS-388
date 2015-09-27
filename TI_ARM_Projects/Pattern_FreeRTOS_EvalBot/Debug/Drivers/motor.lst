@@ -1,0 +1,1243 @@
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                             PC v5.0.4 *
+       3                    ;* Date/Time created: Thu Dec 12 08:23:15 2013                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=on --code_state=16 --disable_dual_state --e
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Drivers/motor.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v5.0.4 Copyright (c) 1996-2013 Te
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("H:\EECS_388\TI_ARM_Projects\Pattern_FreeRTOS_EvalBot\Debug")
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("GPIOPinConfigure")
+      15                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("GPIOPinConfigure")
+      16                            .dwattr $C$DW$1, DW_AT_declaration
+      17                            .dwattr $C$DW$1, DW_AT_external
+      18                            .dwattr $C$DW$1, DW_AT_decl_file("C:/TI_CodeComposer/Stellaris-EVALBOT/driverlib/gpio.h")
+      19                            .dwattr $C$DW$1, DW_AT_decl_line(0x8f)
+      20                            .dwattr $C$DW$1, DW_AT_decl_column(0x0d)
+      21                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      22                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$13)
+      23                            .dwendtag $C$DW$1
+      24                    
+      25                    ;       C:\TI_CodeComposer\ccsv5\tools\compiler\arm_5.0.4\bin\armacpia.exe -@C:\\Users\\esantos\\AppDa
+      26 00000000                   .sect   ".text"
+      27                            .clink
+      28                            .thumbfunc MotorsInit
+      29 00000000                   .thumb
+      30                            .global MotorsInit
+      31                    
+      32                    $C$DW$3 .dwtag  DW_TAG_subprogram, DW_AT_name("MotorsInit")
+      33                            .dwattr $C$DW$3, DW_AT_low_pc(MotorsInit)
+      34                            .dwattr $C$DW$3, DW_AT_high_pc(0x00)
+      35                            .dwattr $C$DW$3, DW_AT_TI_symbol_name("MotorsInit")
+      36                            .dwattr $C$DW$3, DW_AT_external
+      37                            .dwattr $C$DW$3, DW_AT_TI_begin_file("../Drivers/motor.c")
+      38                            .dwattr $C$DW$3, DW_AT_TI_begin_line(0x3d)
+      39                            .dwattr $C$DW$3, DW_AT_TI_begin_column(0x01)
+      40                            .dwattr $C$DW$3, DW_AT_decl_file("../Drivers/motor.c")
+      41                            .dwattr $C$DW$3, DW_AT_decl_line(0x3d)
+      42                            .dwattr $C$DW$3, DW_AT_decl_column(0x01)
+      43                            .dwattr $C$DW$3, DW_AT_TI_max_frame_size(0x08)
+      44                            .dwpsn  file "../Drivers/motor.c",line 62,column 1,is_stmt,address MotorsInit,isa 1
+      45                    
+      46                            .dwfde $C$DW$CIE, MotorsInit
+      47                    
+      48                    ;*****************************************************************************
+      49                    ;* FUNCTION NAME: MotorsInit                                                 *
+      50                    ;*                                                                           *
+      51                    ;*   Regs Modified     : A1,A2,A3,A4,V1,V9,SP,LR,SR                          *
+      52                    ;*   Regs Used         : A1,A2,A3,A4,V1,V9,SP,LR,SR                          *
+      53                    ;*   Local Frame Size  : 0 Args + 0 Auto + 8 Save = 8 byte                   *
+      54                    ;*****************************************************************************
+      55 00000000           MotorsInit:
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    2
+
+      56                    ;* --------------------------------------------------------------------------*
+      57                            .dwcfi  cfa_offset, 0
+      58 00000000 B510              PUSH      {V1, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+      59                            .dwcfi  cfa_offset, 4
+      60                            .dwcfi  save_reg_to_mem, 14, -4
+      61                            .dwcfi  cfa_offset, 8
+      62                            .dwcfi  save_reg_to_mem, 4, -8
+      63                            .dwcfi  cfa_offset, 8
+      64                            .dwpsn  file "../Drivers/motor.c",line 66,column 5,is_stmt,isa 1
+      65 00000002 4880              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+      66 00000004 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+      67 00000006 6981              LDR       A2, [A1, #24]         ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+      68 00000008 1010F04F          MOV       A1, #1048592          ; [DPU_3_PIPE] |66|  ; [KEEP 32-BIT INS]
+      69                    $C$DW$4 .dwtag  DW_TAG_TI_branch
+      70                            .dwattr $C$DW$4, DW_AT_low_pc(0x00)
+      71                            .dwattr $C$DW$4, DW_AT_TI_call
+      72                            .dwattr $C$DW$4, DW_AT_TI_indirect
+      73 0000000c 4788              BLX       A2                    ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+      74                            ; CALL OCCURS {}                 ; [] |66| 
+      75                            .dwpsn  file "../Drivers/motor.c",line 67,column 5,is_stmt,isa 1
+      76 0000000e 487D              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+      77 00000010 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+      78 00000012 6E41              LDR       A2, [A1, #100]        ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+      79 00000014 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+      80                    $C$DW$5 .dwtag  DW_TAG_TI_branch
+      81                            .dwattr $C$DW$5, DW_AT_low_pc(0x00)
+      82                            .dwattr $C$DW$5, DW_AT_TI_call
+      83                            .dwattr $C$DW$5, DW_AT_TI_indirect
+      84 00000016 4788              BLX       A2                    ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+      85                            ; CALL OCCURS {}                 ; [] |67| 
+      86                            .dwpsn  file "../Drivers/motor.c",line 72,column 5,is_stmt,isa 1
+      87 00000018 487A              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+      88 0000001a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+      89 0000001c 6981              LDR       A2, [A1, #24]         ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+      90 0000001e 487A              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+      91                    $C$DW$6 .dwtag  DW_TAG_TI_branch
+      92                            .dwattr $C$DW$6, DW_AT_low_pc(0x00)
+      93                            .dwattr $C$DW$6, DW_AT_TI_call
+      94                            .dwattr $C$DW$6, DW_AT_TI_indirect
+      95 00000020 4788              BLX       A2                    ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+      96                            ; CALL OCCURS {}                 ; [] |72| 
+      97                            .dwpsn  file "../Drivers/motor.c",line 73,column 5,is_stmt,isa 1
+      98 00000022 4878              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+      99 00000024 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     100 00000026 6981              LDR       A2, [A1, #24]         ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     101 00000028 4878              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     102                    $C$DW$7 .dwtag  DW_TAG_TI_branch
+     103                            .dwattr $C$DW$7, DW_AT_low_pc(0x00)
+     104                            .dwattr $C$DW$7, DW_AT_TI_call
+     105                            .dwattr $C$DW$7, DW_AT_TI_indirect
+     106 0000002a 4788              BLX       A2                    ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     107                            ; CALL OCCURS {}                 ; [] |73| 
+     108                            .dwpsn  file "../Drivers/motor.c",line 78,column 5,is_stmt,isa 1
+     109 0000002c 4878              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |78|  ; [ORIG 16-BIT INS]
+     110                    $C$DW$8 .dwtag  DW_TAG_TI_branch
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    3
+
+     111                            .dwattr $C$DW$8, DW_AT_low_pc(0x00)
+     112                            .dwattr $C$DW$8, DW_AT_name("GPIOPinConfigure")
+     113                            .dwattr $C$DW$8, DW_AT_TI_call
+     114 0000002e FFFEF7FF!         BL        GPIOPinConfigure      ; [DPU_3_PIPE] |78|  ; [KEEP 32-BIT INS]
+     115                            ; CALL OCCURS {GPIOPinConfigure }  ; [] |78| 
+     116                            .dwpsn  file "../Drivers/motor.c",line 79,column 5,is_stmt,isa 1
+     117 00000032 4878              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |79|  ; [ORIG 16-BIT INS]
+     118                    $C$DW$9 .dwtag  DW_TAG_TI_branch
+     119                            .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     120                            .dwattr $C$DW$9, DW_AT_name("GPIOPinConfigure")
+     121                            .dwattr $C$DW$9, DW_AT_TI_call
+     122 00000034 FFFEF7FF!         BL        GPIOPinConfigure      ; [DPU_3_PIPE] |79|  ; [KEEP 32-BIT INS]
+     123                            ; CALL OCCURS {GPIOPinConfigure }  ; [] |79| 
+     124                            .dwpsn  file "../Drivers/motor.c",line 84,column 5,is_stmt,isa 1
+     125 00000038 488D              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     126 0000003a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     127 0000003c 6843              LDR       A4, [A1, #4]          ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     128 0000003e 488D              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     129 00000040 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     130 00000042 2202              MOVS      A3, #2                ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     131                    $C$DW$10        .dwtag  DW_TAG_TI_branch
+     132                            .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+     133                            .dwattr $C$DW$10, DW_AT_TI_call
+     134                            .dwattr $C$DW$10, DW_AT_TI_indirect
+     135 00000044 4798              BLX       A4                    ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     136                            ; CALL OCCURS {}                 ; [] |84| 
+     137                            .dwpsn  file "../Drivers/motor.c",line 86,column 5,is_stmt,isa 1
+     138 00000046 486F              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     139 00000048 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     140 0000004a 6E00              LDR       A1, [A1, #96]         ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     141                    $C$DW$11        .dwtag  DW_TAG_TI_branch
+     142                            .dwattr $C$DW$11, DW_AT_low_pc(0x00)
+     143                            .dwattr $C$DW$11, DW_AT_TI_call
+     144                            .dwattr $C$DW$11, DW_AT_TI_indirect
+     145 0000004c 4780              BLX       A1                    ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     146                            ; CALL OCCURS {}                 ; [] |86| 
+     147 0000004e 517AF44F          MOV       A2, #16000            ; [DPU_3_PIPE] |86|  ; [KEEP 32-BIT INS]
+     148 00000052 F2F1FBB0          UDIV      A3, A1, A2            ; [DPU_3_PIPE] |86|  ; [KEEP 32-BIT INS]
+     149 00000056 4886              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     150 00000058 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     151 0000005a 6883              LDR       A4, [A1, #8]          ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     152 0000005c 4885              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     153 0000005e 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     154                    $C$DW$12        .dwtag  DW_TAG_TI_branch
+     155                            .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     156                            .dwattr $C$DW$12, DW_AT_TI_call
+     157                            .dwattr $C$DW$12, DW_AT_TI_indirect
+     158 00000060 4798              BLX       A4                    ; [DPU_3_PIPE] |86|  ; [ORIG 16-BIT INS]
+     159                            ; CALL OCCURS {}                 ; [] |86| 
+     160                            .dwpsn  file "../Drivers/motor.c",line 91,column 5,is_stmt,isa 1
+     161 00000062 4883              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     162 00000064 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     163 00000066 6843              LDR       A4, [A1, #4]          ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     164 00000068 4882              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     165 0000006a 2180              MOVS      A2, #128              ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    4
+
+     166 0000006c 2202              MOVS      A3, #2                ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     167                    $C$DW$13        .dwtag  DW_TAG_TI_branch
+     168                            .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     169                            .dwattr $C$DW$13, DW_AT_TI_call
+     170                            .dwattr $C$DW$13, DW_AT_TI_indirect
+     171 0000006e 4798              BLX       A4                    ; [DPU_3_PIPE] |91|  ; [ORIG 16-BIT INS]
+     172                            ; CALL OCCURS {}                 ; [] |91| 
+     173                            .dwpsn  file "../Drivers/motor.c",line 93,column 5,is_stmt,isa 1
+     174 00000070 4864              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     175 00000072 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     176 00000074 6E00              LDR       A1, [A1, #96]         ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     177                    $C$DW$14        .dwtag  DW_TAG_TI_branch
+     178                            .dwattr $C$DW$14, DW_AT_low_pc(0x00)
+     179                            .dwattr $C$DW$14, DW_AT_TI_call
+     180                            .dwattr $C$DW$14, DW_AT_TI_indirect
+     181 00000076 4780              BLX       A1                    ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     182                            ; CALL OCCURS {}                 ; [] |93| 
+     183                    ;* --------------------------------------------------------------------------*
+     184 00000078 517AF44F          MOV       A2, #16000            ; [DPU_3_PIPE] |93|  ; [KEEP 32-BIT INS]
+     185 0000007c F2F1FBB0          UDIV      A3, A1, A2            ; [DPU_3_PIPE] |93|  ; [KEEP 32-BIT INS]
+     186 00000080 487B              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     187 00000082 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     188 00000084 6883              LDR       A4, [A1, #8]          ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     189 00000086 487B              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     190 00000088 2180              MOVS      A2, #128              ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     191                    $C$DW$15        .dwtag  DW_TAG_TI_branch
+     192                            .dwattr $C$DW$15, DW_AT_low_pc(0x00)
+     193                            .dwattr $C$DW$15, DW_AT_TI_call
+     194                            .dwattr $C$DW$15, DW_AT_TI_indirect
+     195 0000008a 4798              BLX       A4                    ; [DPU_3_PIPE] |93|  ; [ORIG 16-BIT INS]
+     196                            ; CALL OCCURS {}                 ; [] |93| 
+     197                            .dwpsn  file "../Drivers/motor.c",line 99,column 5,is_stmt,isa 1
+     198 0000008c 4878              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     199 0000008e 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     200 00000090 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     201 00000092 4878              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     202 00000094 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     203 00000096 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     204                    $C$DW$16        .dwtag  DW_TAG_TI_branch
+     205                            .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     206                            .dwattr $C$DW$16, DW_AT_TI_call
+     207                            .dwattr $C$DW$16, DW_AT_TI_indirect
+     208 00000098 4798              BLX       A4                    ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     209                            ; CALL OCCURS {}                 ; [] |99| 
+     210                            .dwpsn  file "../Drivers/motor.c",line 100,column 5,is_stmt,isa 1
+     211 0000009a 4875              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     212 0000009c 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     213 0000009e 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     214 000000a0 4874              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     215 000000a2 2182              MOVS      A2, #130              ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     216 000000a4 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     217                    $C$DW$17        .dwtag  DW_TAG_TI_branch
+     218                            .dwattr $C$DW$17, DW_AT_low_pc(0x00)
+     219                            .dwattr $C$DW$17, DW_AT_TI_call
+     220                            .dwattr $C$DW$17, DW_AT_TI_indirect
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    5
+
+     221 000000a6 4798              BLX       A4                    ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     222                            ; CALL OCCURS {}                 ; [] |100| 
+     223                            .dwpsn  file "../Drivers/motor.c",line 105,column 5,is_stmt,isa 1
+     224 000000a8 4871              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     225 000000aa 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     226 000000ac 6AC3              LDR       A4, [A1, #44]         ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     227 000000ae 4871              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     228 000000b0 2105              MOVS      A2, #5                ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     229 000000b2 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     230                    $C$DW$18        .dwtag  DW_TAG_TI_branch
+     231                            .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     232                            .dwattr $C$DW$18, DW_AT_TI_call
+     233                            .dwattr $C$DW$18, DW_AT_TI_indirect
+     234 000000b4 4798              BLX       A4                    ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     235                            ; CALL OCCURS {}                 ; [] |105| 
+     236                            .dwpsn  file "../Drivers/motor.c",line 110,column 5,is_stmt,isa 1
+     237 000000b6 486E              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     238 000000b8 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     239 000000ba 6902              LDR       A3, [A1, #16]         ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     240 000000bc 486D              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     241 000000be 2140              MOVS      A2, #64               ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     242                    $C$DW$19        .dwtag  DW_TAG_TI_branch
+     243                            .dwattr $C$DW$19, DW_AT_low_pc(0x00)
+     244                            .dwattr $C$DW$19, DW_AT_TI_call
+     245                            .dwattr $C$DW$19, DW_AT_TI_indirect
+     246 000000c0 4790              BLX       A3                    ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     247                            ; CALL OCCURS {}                 ; [] |110| 
+     248                            .dwpsn  file "../Drivers/motor.c",line 111,column 5,is_stmt,isa 1
+     249 000000c2 486B              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     250 000000c4 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     251 000000c6 6902              LDR       A3, [A1, #16]         ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     252 000000c8 486A              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     253 000000ca 2180              MOVS      A2, #128              ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     254                    $C$DW$20        .dwtag  DW_TAG_TI_branch
+     255                            .dwattr $C$DW$20, DW_AT_low_pc(0x00)
+     256                            .dwattr $C$DW$20, DW_AT_TI_call
+     257                            .dwattr $C$DW$20, DW_AT_TI_indirect
+     258 000000cc 4790              BLX       A3                    ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     259                            ; CALL OCCURS {}                 ; [] |111| 
+     260                            .dwpsn  file "../Drivers/motor.c",line 117,column 5,is_stmt,isa 1
+     261 000000ce 4870              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     262 000000d0 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     263 000000d2 6B82              LDR       A3, [A1, #56]         ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     264 000000d4 486F              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     265 000000d6 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     266                    $C$DW$21        .dwtag  DW_TAG_TI_branch
+     267                            .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     268                            .dwattr $C$DW$21, DW_AT_TI_call
+     269                            .dwattr $C$DW$21, DW_AT_TI_indirect
+     270 000000d8 4790              BLX       A3                    ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     271                            ; CALL OCCURS {}                 ; [] |117| 
+     272                            .dwpsn  file "../Drivers/motor.c",line 118,column 5,is_stmt,isa 1
+     273 000000da 486D              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     274 000000dc 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     275 000000de 6944              LDR       V1, [A1, #20]         ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    6
+
+     276 000000e0 486C              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     277 000000e2 2108              MOVS      A2, #8                ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     278 000000e4 2201              MOVS      A3, #1                ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     279 000000e6 230A              MOVS      A4, #10               ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     280                    $C$DW$22        .dwtag  DW_TAG_TI_branch
+     281                            .dwattr $C$DW$22, DW_AT_low_pc(0x00)
+     282                            .dwattr $C$DW$22, DW_AT_TI_call
+     283                            .dwattr $C$DW$22, DW_AT_TI_indirect
+     284 000000e8 47A0              BLX       V1                    ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     285                            ; CALL OCCURS {}                 ; [] |118| 
+     286                            .dwpsn  file "../Drivers/motor.c",line 124,column 5,is_stmt,isa 1
+     287 000000ea 4869              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     288 000000ec 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     289 000000ee 6BC2              LDR       A3, [A1, #60]         ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     290 000000f0 4868              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     291 000000f2 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     292                    $C$DW$23        .dwtag  DW_TAG_TI_branch
+     293                            .dwattr $C$DW$23, DW_AT_low_pc(0x00)
+     294                            .dwattr $C$DW$23, DW_AT_TI_call
+     295                            .dwattr $C$DW$23, DW_AT_TI_indirect
+     296 000000f4 4790              BLX       A3                    ; [DPU_3_PIPE] |124|  ; [ORIG 16-BIT INS]
+     297                            ; CALL OCCURS {}                 ; [] |124| 
+     298                            .dwpsn  file "../Drivers/motor.c",line 125,column 5,is_stmt,isa 1
+     299 000000f6 4866              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     300 000000f8 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     301 000000fa 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     302 000000fc 4865              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     303 000000fe 2104              MOVS      A2, #4                ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     304 00000100 2204              MOVS      A3, #4                ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     305                    $C$DW$24        .dwtag  DW_TAG_TI_branch
+     306                            .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     307                            .dwattr $C$DW$24, DW_AT_TI_call
+     308                            .dwattr $C$DW$24, DW_AT_TI_indirect
+     309 00000102 4798              BLX       A4                    ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     310                            ; CALL OCCURS {}                 ; [] |125| 
+     311                            .dwpsn  file "../Drivers/motor.c",line 131,column 5,is_stmt,isa 1
+     312 00000104 4862              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     313 00000106 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     314 00000108 6BC2              LDR       A3, [A1, #60]         ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     315 0000010a 4862              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     316 0000010c 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     317                    $C$DW$25        .dwtag  DW_TAG_TI_branch
+     318                            .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     319                            .dwattr $C$DW$25, DW_AT_TI_call
+     320                            .dwattr $C$DW$25, DW_AT_TI_indirect
+     321 0000010e 4790              BLX       A3                    ; [DPU_3_PIPE] |131|  ; [ORIG 16-BIT INS]
+     322                            ; CALL OCCURS {}                 ; [] |131| 
+     323                    ;* --------------------------------------------------------------------------*
+     324                            .dwpsn  file "../Drivers/motor.c",line 132,column 5,is_stmt,isa 1
+     325 00000110 485F              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     326 00000112 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     327 00000114 6BC2              LDR       A3, [A1, #60]         ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     328 00000116 4860              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     329 00000118 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     330                    $C$DW$26        .dwtag  DW_TAG_TI_branch
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    7
+
+     331                            .dwattr $C$DW$26, DW_AT_low_pc(0x00)
+     332                            .dwattr $C$DW$26, DW_AT_TI_call
+     333                            .dwattr $C$DW$26, DW_AT_TI_indirect
+     334 0000011a 4790              BLX       A3                    ; [DPU_3_PIPE] |132|  ; [ORIG 16-BIT INS]
+     335                            ; CALL OCCURS {}                 ; [] |132| 
+     336                            .dwpsn  file "../Drivers/motor.c",line 133,column 5,is_stmt,isa 1
+     337 0000011c 485C              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     338 0000011e 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     339 00000120 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     340 00000122 485C              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     341 00000124 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     342 00000126 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     343                    $C$DW$27        .dwtag  DW_TAG_TI_branch
+     344                            .dwattr $C$DW$27, DW_AT_low_pc(0x00)
+     345                            .dwattr $C$DW$27, DW_AT_TI_call
+     346                            .dwattr $C$DW$27, DW_AT_TI_indirect
+     347 00000128 4798              BLX       A4                    ; [DPU_3_PIPE] |133|  ; [ORIG 16-BIT INS]
+     348                            ; CALL OCCURS {}                 ; [] |133| 
+     349                            .dwpsn  file "../Drivers/motor.c",line 134,column 5,is_stmt,isa 1
+     350 0000012a 4859              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     351 0000012c 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     352 0000012e 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     353 00000130 4859              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     354 00000132 2103              MOVS      A2, #3                ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     355 00000134 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     356                    $C$DW$28        .dwtag  DW_TAG_TI_branch
+     357                            .dwattr $C$DW$28, DW_AT_low_pc(0x00)
+     358                            .dwattr $C$DW$28, DW_AT_TI_call
+     359                            .dwattr $C$DW$28, DW_AT_TI_indirect
+     360 00000136 4798              BLX       A4                    ; [DPU_3_PIPE] |134|  ; [ORIG 16-BIT INS]
+     361                            ; CALL OCCURS {}                 ; [] |134| 
+     362                            .dwpsn  file "../Drivers/motor.c",line 139,column 5,is_stmt,isa 1
+     363 00000138 4855              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     364 0000013a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     365 0000013c 6BC2              LDR       A3, [A1, #60]         ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     366 0000013e 4855              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     367 00000140 2120              MOVS      A2, #32               ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     368                    $C$DW$29        .dwtag  DW_TAG_TI_branch
+     369                            .dwattr $C$DW$29, DW_AT_low_pc(0x00)
+     370                            .dwattr $C$DW$29, DW_AT_TI_call
+     371                            .dwattr $C$DW$29, DW_AT_TI_indirect
+     372 00000142 4790              BLX       A3                    ; [DPU_3_PIPE] |139|  ; [ORIG 16-BIT INS]
+     373                            ; CALL OCCURS {}                 ; [] |139| 
+     374                            .dwpsn  file "../Drivers/motor.c",line 140,column 5,is_stmt,isa 1
+     375 00000144 4852              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     376 00000146 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     377 00000148 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     378 0000014a 4852              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     379 0000014c 2120              MOVS      A2, #32               ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     380 0000014e 2220              MOVS      A3, #32               ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+     381                    $C$DW$30        .dwtag  DW_TAG_TI_branch
+     382                            .dwattr $C$DW$30, DW_AT_low_pc(0x00)
+     383                            .dwattr $C$DW$30, DW_AT_TI_call
+     384                            .dwattr $C$DW$30, DW_AT_TI_indirect
+     385 00000150 4798              BLX       A4                    ; [DPU_3_PIPE] |140|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    8
+
+     386                            ; CALL OCCURS {}                 ; [] |140| 
+     387                            .dwpsn  file "../Drivers/motor.c",line 141,column 1,is_stmt,isa 1
+     388                            .dwcfi  cfa_offset, 8
+     389                    $C$DW$31        .dwtag  DW_TAG_TI_branch
+     390                            .dwattr $C$DW$31, DW_AT_low_pc(0x00)
+     391                            .dwattr $C$DW$31, DW_AT_TI_return
+     392 00000152 BD10              POP       {V1, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     393                            ; BRANCH OCCURS                  ; [] 
+     394                            .dwattr $C$DW$3, DW_AT_TI_end_file("../Drivers/motor.c")
+     395                            .dwattr $C$DW$3, DW_AT_TI_end_line(0x8d)
+     396                            .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
+     397                            .dwendentry
+     398                            .dwendtag $C$DW$3
+     399                    
+     400 00000154                   .sect   ".text"
+     401                            .clink
+     402                            .thumbfunc MotorDir
+     403 00000154                   .thumb
+     404                            .global MotorDir
+     405                    
+     406                    $C$DW$32        .dwtag  DW_TAG_subprogram, DW_AT_name("MotorDir")
+     407                            .dwattr $C$DW$32, DW_AT_low_pc(MotorDir)
+     408                            .dwattr $C$DW$32, DW_AT_high_pc(0x00)
+     409                            .dwattr $C$DW$32, DW_AT_TI_symbol_name("MotorDir")
+     410                            .dwattr $C$DW$32, DW_AT_external
+     411                            .dwattr $C$DW$32, DW_AT_TI_begin_file("../Drivers/motor.c")
+     412                            .dwattr $C$DW$32, DW_AT_TI_begin_line(0x9f)
+     413                            .dwattr $C$DW$32, DW_AT_TI_begin_column(0x01)
+     414                            .dwattr $C$DW$32, DW_AT_decl_file("../Drivers/motor.c")
+     415                            .dwattr $C$DW$32, DW_AT_decl_line(0x9f)
+     416                            .dwattr $C$DW$32, DW_AT_decl_column(0x01)
+     417                            .dwattr $C$DW$32, DW_AT_TI_max_frame_size(0x08)
+     418                            .dwpsn  file "../Drivers/motor.c",line 160,column 1,is_stmt,address MotorDir,isa 1
+     419                    
+     420                            .dwfde $C$DW$CIE, MotorDir
+     421                    $C$DW$33        .dwtag  DW_TAG_formal_parameter, DW_AT_name("ucMotor")
+     422                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("ucMotor")
+     423                            .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$20)
+     424                            .dwattr $C$DW$33, DW_AT_location[DW_OP_reg0]
+     425                    $C$DW$34        .dwtag  DW_TAG_formal_parameter, DW_AT_name("eDirection")
+     426                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("eDirection")
+     427                            .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$22)
+     428                            .dwattr $C$DW$34, DW_AT_location[DW_OP_reg1]
+     429                    
+     430                    ;*****************************************************************************
+     431                    ;* FUNCTION NAME: MotorDir                                                   *
+     432                    ;*                                                                           *
+     433                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     434                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     435                    ;*   Local Frame Size  : 0 Args + 4 Auto + 4 Save = 8 byte                   *
+     436                    ;*****************************************************************************
+     437 00000154           MotorDir:
+     438                    ;* --------------------------------------------------------------------------*
+     439                            .dwcfi  cfa_offset, 0
+     440 00000154 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE    9
+
+     441                            .dwcfi  cfa_offset, 4
+     442                            .dwcfi  save_reg_to_mem, 14, -4
+     443                            .dwcfi  cfa_offset, 8
+     444                            .dwcfi  save_reg_to_mem, 3, -8
+     445                            .dwcfi  cfa_offset, 8
+     446                    $C$DW$35        .dwtag  DW_TAG_variable, DW_AT_name("ucMotor")
+     447                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("ucMotor")
+     448                            .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$20)
+     449                            .dwattr $C$DW$35, DW_AT_location[DW_OP_breg13 0]
+     450                    $C$DW$36        .dwtag  DW_TAG_variable, DW_AT_name("eDirection")
+     451                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("eDirection")
+     452                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$22)
+     453                            .dwattr $C$DW$36, DW_AT_location[DW_OP_breg13 1]
+     454 00000156 1001F88D          STRB      A2, [SP, #1]          ; [DPU_3_PIPE] |160|  ; [KEEP 32-BIT INS]
+     455 0000015a 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |160|  ; [KEEP 32-BIT INS]
+     456                            .dwpsn  file "../Drivers/motor.c",line 170,column 5,is_stmt,isa 1
+     457 0000015e 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |170|  ; [KEEP 32-BIT INS]
+     458 00000162 B990              CBNZ      A1, ||$C$L2||         ; []  ; [ORIG 16-BIT INS]
+     459                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |170| 
+     460                    ;* --------------------------------------------------------------------------*
+     461                            .dwpsn  file "../Drivers/motor.c",line 175,column 9,is_stmt,isa 1
+     462 00000164 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |175|  ; [KEEP 32-BIT INS]
+     463 00000168 B938              CBNZ      A1, ||$C$L1||         ; []  ; [ORIG 16-BIT INS]
+     464                            ; BRANCHCC OCCURS {||$C$L1||}    ; [] |175| 
+     465                    ;* --------------------------------------------------------------------------*
+     466                            .dwpsn  file "../Drivers/motor.c",line 177,column 13,is_stmt,isa 1
+     467 0000016a 4849              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     468 0000016c 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     469 0000016e 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     470 00000170 4849              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     471 00000172 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     472 00000174 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     473                    $C$DW$37        .dwtag  DW_TAG_TI_branch
+     474                            .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     475                            .dwattr $C$DW$37, DW_AT_TI_call
+     476                            .dwattr $C$DW$37, DW_AT_TI_indirect
+     477 00000176 4798              BLX       A4                    ; [DPU_3_PIPE] |177|  ; [ORIG 16-BIT INS]
+     478                            ; CALL OCCURS {}                 ; [] |177| 
+     479                            .dwpsn  file "../Drivers/motor.c",line 178,column 9,is_stmt,isa 1
+     480 00000178 E019              B         ||$C$L4||             ; [DPU_3_PIPE] |178|  ; [ORIG 16-BIT INS]
+     481                            ; BRANCH OCCURS {||$C$L4||}      ; [] |178| 
+     482                    ;* --------------------------------------------------------------------------*
+     483 0000017a           ||$C$L1||:    
+     484                            .dwpsn  file "../Drivers/motor.c",line 181,column 13,is_stmt,isa 1
+     485 0000017a 4845              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     486 0000017c 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     487 0000017e 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     488 00000180 4845              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     489 00000182 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     490 00000184 2202              MOVS      A3, #2                ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+     491                    $C$DW$38        .dwtag  DW_TAG_TI_branch
+     492                            .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     493                            .dwattr $C$DW$38, DW_AT_TI_call
+     494                            .dwattr $C$DW$38, DW_AT_TI_indirect
+     495 00000186 4798              BLX       A4                    ; [DPU_3_PIPE] |181|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   10
+
+     496                            ; CALL OCCURS {}                 ; [] |181| 
+     497                            .dwpsn  file "../Drivers/motor.c",line 183,column 5,is_stmt,isa 1
+     498 00000188 E011              B         ||$C$L4||             ; [DPU_3_PIPE] |183|  ; [ORIG 16-BIT INS]
+     499                            ; BRANCH OCCURS {||$C$L4||}      ; [] |183| 
+     500                    ;* --------------------------------------------------------------------------*
+     501 0000018a           ||$C$L2||:    
+     502                            .dwpsn  file "../Drivers/motor.c",line 189,column 9,is_stmt,isa 1
+     503 0000018a 0001F89D          LDRB      A1, [SP, #1]          ; [DPU_3_PIPE] |189|  ; [KEEP 32-BIT INS]
+     504 0000018e B938              CBNZ      A1, ||$C$L3||         ; []  ; [ORIG 16-BIT INS]
+     505                            ; BRANCHCC OCCURS {||$C$L3||}    ; [] |189| 
+     506                    ;* --------------------------------------------------------------------------*
+     507                            .dwpsn  file "../Drivers/motor.c",line 191,column 13,is_stmt,isa 1
+     508 00000190 483F              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     509 00000192 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     510 00000194 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     511 00000196 483F              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     512 00000198 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     513 0000019a 2202              MOVS      A3, #2                ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     514                    $C$DW$39        .dwtag  DW_TAG_TI_branch
+     515                            .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     516                            .dwattr $C$DW$39, DW_AT_TI_call
+     517                            .dwattr $C$DW$39, DW_AT_TI_indirect
+     518 0000019c 4798              BLX       A4                    ; [DPU_3_PIPE] |191|  ; [ORIG 16-BIT INS]
+     519                            ; CALL OCCURS {}                 ; [] |191| 
+     520                            .dwpsn  file "../Drivers/motor.c",line 192,column 9,is_stmt,isa 1
+     521 0000019e E006              B         ||$C$L4||             ; [DPU_3_PIPE] |192|  ; [ORIG 16-BIT INS]
+     522                            ; BRANCH OCCURS {||$C$L4||}      ; [] |192| 
+     523                    ;* --------------------------------------------------------------------------*
+     524 000001a0           ||$C$L3||:    
+     525                            .dwpsn  file "../Drivers/motor.c",line 195,column 13,is_stmt,isa 1
+     526 000001a0 483B              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     527 000001a2 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     528 000001a4 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     529 000001a6 483B              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     530 000001a8 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     531 000001aa 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     532                    $C$DW$40        .dwtag  DW_TAG_TI_branch
+     533                            .dwattr $C$DW$40, DW_AT_low_pc(0x00)
+     534                            .dwattr $C$DW$40, DW_AT_TI_call
+     535                            .dwattr $C$DW$40, DW_AT_TI_indirect
+     536 000001ac 4798              BLX       A4                    ; [DPU_3_PIPE] |195|  ; [ORIG 16-BIT INS]
+     537                            ; CALL OCCURS {}                 ; [] |195| 
+     538                            .dwpsn  file "../Drivers/motor.c",line 198,column 1,is_stmt,isa 1
+     539                    ;* --------------------------------------------------------------------------*
+     540 000001ae           ||$C$L4||:    
+     541                            .dwcfi  cfa_offset, 8
+     542                    $C$DW$41        .dwtag  DW_TAG_TI_branch
+     543                            .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     544                            .dwattr $C$DW$41, DW_AT_TI_return
+     545 000001ae BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     546                            ; BRANCH OCCURS                  ; [] 
+     547                            .dwattr $C$DW$32, DW_AT_TI_end_file("../Drivers/motor.c")
+     548                            .dwattr $C$DW$32, DW_AT_TI_end_line(0xc6)
+     549                            .dwattr $C$DW$32, DW_AT_TI_end_column(0x01)
+     550                            .dwendentry
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   11
+
+     551                            .dwendtag $C$DW$32
+     552                    
+     553 000001b0                   .sect   ".text"
+     554                            .clink
+     555                            .thumbfunc MotorRun
+     556 000001b0                   .thumb
+     557                            .global MotorRun
+     558                    
+     559                    $C$DW$42        .dwtag  DW_TAG_subprogram, DW_AT_name("MotorRun")
+     560                            .dwattr $C$DW$42, DW_AT_low_pc(MotorRun)
+     561                            .dwattr $C$DW$42, DW_AT_high_pc(0x00)
+     562                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("MotorRun")
+     563                            .dwattr $C$DW$42, DW_AT_external
+     564                            .dwattr $C$DW$42, DW_AT_TI_begin_file("../Drivers/motor.c")
+     565                            .dwattr $C$DW$42, DW_AT_TI_begin_line(0xd7)
+     566                            .dwattr $C$DW$42, DW_AT_TI_begin_column(0x01)
+     567                            .dwattr $C$DW$42, DW_AT_decl_file("../Drivers/motor.c")
+     568                            .dwattr $C$DW$42, DW_AT_decl_line(0xd7)
+     569                            .dwattr $C$DW$42, DW_AT_decl_column(0x01)
+     570                            .dwattr $C$DW$42, DW_AT_TI_max_frame_size(0x10)
+     571                            .dwpsn  file "../Drivers/motor.c",line 216,column 1,is_stmt,address MotorRun,isa 1
+     572                    
+     573                            .dwfde $C$DW$CIE, MotorRun
+     574                    $C$DW$43        .dwtag  DW_TAG_formal_parameter, DW_AT_name("ucMotor")
+     575                            .dwattr $C$DW$43, DW_AT_TI_symbol_name("ucMotor")
+     576                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$20)
+     577                            .dwattr $C$DW$43, DW_AT_location[DW_OP_reg0]
+     578                    
+     579                    ;*****************************************************************************
+     580                    ;* FUNCTION NAME: MotorRun                                                   *
+     581                    ;*                                                                           *
+     582                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     583                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     584                    ;*   Local Frame Size  : 0 Args + 8 Auto + 4 Save = 12 byte                  *
+     585                    ;*****************************************************************************
+     586 000001b0           MotorRun:
+     587                    ;* --------------------------------------------------------------------------*
+     588                            .dwcfi  cfa_offset, 0
+     589 000001b0 B50E              PUSH      {A2, A3, A4, LR}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     590                            .dwcfi  cfa_offset, 4
+     591                            .dwcfi  save_reg_to_mem, 14, -4
+     592                            .dwcfi  cfa_offset, 8
+     593                            .dwcfi  save_reg_to_mem, 3, -8
+     594                            .dwcfi  cfa_offset, 12
+     595                            .dwcfi  save_reg_to_mem, 2, -12
+     596                            .dwcfi  cfa_offset, 16
+     597                            .dwcfi  save_reg_to_mem, 1, -16
+     598                            .dwcfi  cfa_offset, 16
+     599                    $C$DW$44        .dwtag  DW_TAG_variable, DW_AT_name("ucMotor")
+     600                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("ucMotor")
+     601                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$20)
+     602                            .dwattr $C$DW$44, DW_AT_location[DW_OP_breg13 0]
+     603                    $C$DW$45        .dwtag  DW_TAG_variable, DW_AT_name("ulPort")
+     604                            .dwattr $C$DW$45, DW_AT_TI_symbol_name("ulPort")
+     605                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$13)
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   12
+
+     606                            .dwattr $C$DW$45, DW_AT_location[DW_OP_breg13 4]
+     607 000001b2 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |216|  ; [KEEP 32-BIT INS]
+     608                            .dwpsn  file "../Drivers/motor.c",line 227,column 5,is_stmt,isa 1
+     609 000001b6 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |227|  ; [KEEP 32-BIT INS]
+     610 000001ba B908              CBNZ      A1, ||$C$L5||         ; []  ; [ORIG 16-BIT INS]
+     611                            ; BRANCHCC OCCURS {||$C$L5||}    ; [] |227| 
+     612                    ;* --------------------------------------------------------------------------*
+     613 000001bc 4836              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |227|  ; [ORIG 16-BIT INS]
+     614 000001be E000              B         ||$C$L6||             ; [DPU_3_PIPE] |227|  ; [ORIG 16-BIT INS]
+     615                            ; BRANCH OCCURS {||$C$L6||}      ; [] |227| 
+     616                    ;* --------------------------------------------------------------------------*
+     617 000001c0           ||$C$L5||:    
+     618 000001c0 4834              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |227|  ; [ORIG 16-BIT INS]
+     619                    ;* --------------------------------------------------------------------------*
+     620 000001c2           ||$C$L6||:    
+     621 000001c2 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |227|  ; [ORIG 16-BIT INS]
+     622                            .dwpsn  file "../Drivers/motor.c",line 233,column 5,is_stmt,isa 1
+     623 000001c4 4832              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     624 000001c6 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     625 000001c8 6C42              LDR       A3, [A1, #68]         ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     626 000001ca 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     627 000001cc 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     628                    $C$DW$46        .dwtag  DW_TAG_TI_branch
+     629                            .dwattr $C$DW$46, DW_AT_low_pc(0x00)
+     630                            .dwattr $C$DW$46, DW_AT_TI_call
+     631                            .dwattr $C$DW$46, DW_AT_TI_indirect
+     632 000001ce 4790              BLX       A3                    ; [DPU_3_PIPE] |233|  ; [ORIG 16-BIT INS]
+     633                            ; CALL OCCURS {}                 ; [] |233| 
+     634                            .dwpsn  file "../Drivers/motor.c",line 234,column 1,is_stmt,isa 1
+     635                            .dwcfi  cfa_offset, 16
+     636                    $C$DW$47        .dwtag  DW_TAG_TI_branch
+     637                            .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+     638                            .dwattr $C$DW$47, DW_AT_TI_return
+     639 000001d0 BD0E              POP       {A2, A3, A4, PC}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     640                            ; BRANCH OCCURS                  ; [] 
+     641                            .dwattr $C$DW$42, DW_AT_TI_end_file("../Drivers/motor.c")
+     642                            .dwattr $C$DW$42, DW_AT_TI_end_line(0xea)
+     643                            .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
+     644                            .dwendentry
+     645                            .dwendtag $C$DW$42
+     646                    
+     647 000001d2                   .sect   ".text"
+     648                            .clink
+     649                            .thumbfunc MotorStop
+     650 000001d2                   .thumb
+     651                            .global MotorStop
+     652                    
+     653                    $C$DW$48        .dwtag  DW_TAG_subprogram, DW_AT_name("MotorStop")
+     654                            .dwattr $C$DW$48, DW_AT_low_pc(MotorStop)
+     655                            .dwattr $C$DW$48, DW_AT_high_pc(0x00)
+     656                            .dwattr $C$DW$48, DW_AT_TI_symbol_name("MotorStop")
+     657                            .dwattr $C$DW$48, DW_AT_external
+     658                            .dwattr $C$DW$48, DW_AT_TI_begin_file("../Drivers/motor.c")
+     659                            .dwattr $C$DW$48, DW_AT_TI_begin_line(0xfa)
+     660                            .dwattr $C$DW$48, DW_AT_TI_begin_column(0x01)
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   13
+
+     661                            .dwattr $C$DW$48, DW_AT_decl_file("../Drivers/motor.c")
+     662                            .dwattr $C$DW$48, DW_AT_decl_line(0xfa)
+     663                            .dwattr $C$DW$48, DW_AT_decl_column(0x01)
+     664                            .dwattr $C$DW$48, DW_AT_TI_max_frame_size(0x10)
+     665                            .dwpsn  file "../Drivers/motor.c",line 251,column 1,is_stmt,address MotorStop,isa 1
+     666                    
+     667                            .dwfde $C$DW$CIE, MotorStop
+     668                    $C$DW$49        .dwtag  DW_TAG_formal_parameter, DW_AT_name("ucMotor")
+     669                            .dwattr $C$DW$49, DW_AT_TI_symbol_name("ucMotor")
+     670                            .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$20)
+     671                            .dwattr $C$DW$49, DW_AT_location[DW_OP_reg0]
+     672                    
+     673                    ;*****************************************************************************
+     674                    ;* FUNCTION NAME: MotorStop                                                  *
+     675                    ;*                                                                           *
+     676                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     677                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     678                    ;*   Local Frame Size  : 0 Args + 8 Auto + 4 Save = 12 byte                  *
+     679                    ;*****************************************************************************
+     680 000001d2           MotorStop:
+     681                    ;* --------------------------------------------------------------------------*
+     682                            .dwcfi  cfa_offset, 0
+     683 000001d2 B50E              PUSH      {A2, A3, A4, LR}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     684                            .dwcfi  cfa_offset, 4
+     685                            .dwcfi  save_reg_to_mem, 14, -4
+     686                            .dwcfi  cfa_offset, 8
+     687                            .dwcfi  save_reg_to_mem, 3, -8
+     688                            .dwcfi  cfa_offset, 12
+     689                            .dwcfi  save_reg_to_mem, 2, -12
+     690                            .dwcfi  cfa_offset, 16
+     691                            .dwcfi  save_reg_to_mem, 1, -16
+     692                            .dwcfi  cfa_offset, 16
+     693                    $C$DW$50        .dwtag  DW_TAG_variable, DW_AT_name("ucMotor")
+     694                            .dwattr $C$DW$50, DW_AT_TI_symbol_name("ucMotor")
+     695                            .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$20)
+     696                            .dwattr $C$DW$50, DW_AT_location[DW_OP_breg13 0]
+     697                    $C$DW$51        .dwtag  DW_TAG_variable, DW_AT_name("ulPort")
+     698                            .dwattr $C$DW$51, DW_AT_TI_symbol_name("ulPort")
+     699                            .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$13)
+     700                            .dwattr $C$DW$51, DW_AT_location[DW_OP_breg13 4]
+     701 000001d4 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |251|  ; [KEEP 32-BIT INS]
+     702                            .dwpsn  file "../Drivers/motor.c",line 262,column 5,is_stmt,isa 1
+     703 000001d8 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |262|  ; [KEEP 32-BIT INS]
+     704 000001dc B908              CBNZ      A1, ||$C$L7||         ; []  ; [ORIG 16-BIT INS]
+     705                            ; BRANCHCC OCCURS {||$C$L7||}    ; [] |262| 
+     706                    ;* --------------------------------------------------------------------------*
+     707 000001de 482E              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |262|  ; [ORIG 16-BIT INS]
+     708 000001e0 E000              B         ||$C$L8||             ; [DPU_3_PIPE] |262|  ; [ORIG 16-BIT INS]
+     709                            ; BRANCH OCCURS {||$C$L8||}      ; [] |262| 
+     710                    ;* --------------------------------------------------------------------------*
+     711 000001e2           ||$C$L7||:    
+     712 000001e2 482C              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |262|  ; [ORIG 16-BIT INS]
+     713                    ;* --------------------------------------------------------------------------*
+     714 000001e4           ||$C$L8||:    
+     715 000001e4 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |262|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   14
+
+     716                            .dwpsn  file "../Drivers/motor.c",line 269,column 5,is_stmt,isa 1
+     717 000001e6 482A              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     718 000001e8 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     719 000001ea 6BC2              LDR       A3, [A1, #60]         ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     720 000001ec 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     721 000001ee 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     722                    $C$DW$52        .dwtag  DW_TAG_TI_branch
+     723                            .dwattr $C$DW$52, DW_AT_low_pc(0x00)
+     724                            .dwattr $C$DW$52, DW_AT_TI_call
+     725                            .dwattr $C$DW$52, DW_AT_TI_indirect
+     726 000001f0 4790              BLX       A3                    ; [DPU_3_PIPE] |269|  ; [ORIG 16-BIT INS]
+     727                            ; CALL OCCURS {}                 ; [] |269| 
+     728                            .dwpsn  file "../Drivers/motor.c",line 274,column 5,is_stmt,isa 1
+     729 000001f2 4827              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     730 000001f4 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     731 000001f6 6803              LDR       A4, [A1, #0]          ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     732 000001f8 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     733 000001fa 2101              MOVS      A2, #1                ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     734 000001fc 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     735                    $C$DW$53        .dwtag  DW_TAG_TI_branch
+     736                            .dwattr $C$DW$53, DW_AT_low_pc(0x00)
+     737                            .dwattr $C$DW$53, DW_AT_TI_call
+     738                            .dwattr $C$DW$53, DW_AT_TI_indirect
+     739 000001fe 4798              BLX       A4                    ; [DPU_3_PIPE] |274|  ; [ORIG 16-BIT INS]
+     740                            ; CALL OCCURS {}                 ; [] |274| 
+     741                            .dwpsn  file "../Drivers/motor.c",line 275,column 1,is_stmt,isa 1
+     742                            .dwcfi  cfa_offset, 16
+     743                    $C$DW$54        .dwtag  DW_TAG_TI_branch
+     744                            .dwattr $C$DW$54, DW_AT_low_pc(0x00)
+     745                            .dwattr $C$DW$54, DW_AT_TI_return
+     746 00000200 BD0E              POP       {A2, A3, A4, PC}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     747                            ; BRANCH OCCURS                  ; [] 
+     748                            .dwattr $C$DW$48, DW_AT_TI_end_file("../Drivers/motor.c")
+     749                            .dwattr $C$DW$48, DW_AT_TI_end_line(0x113)
+     750                            .dwattr $C$DW$48, DW_AT_TI_end_column(0x01)
+     751                            .dwendentry
+     752                            .dwendtag $C$DW$48
+     753                    
+     754                    ;******************************************************************************
+     755                    ;* CONSTANT TABLE                                                             *
+     756                    ;******************************************************************************
+     757 00000202                   .sect   ".text"
+     758                            .align  4
+     759 00000202 004446C0  ||$C$CON1||:    .field  16777284,32
+         00000206 00000100 
+     760                            .align  4
+     761 00000206 00080100  ||$C$CON2||:    .field  536870920,32
+         0000020a 00002000 
+     762                            .align  4
+     763 0000020a 00802000  ||$C$CON3||:    .field  536871040,32
+         0000020e 00002000 
+     764                            .align  4
+     765 0000020e 00012000  ||$C$CON4||:    .field  196609,32
+         00000212 00000003 
+     766                            .align  4
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   15
+
+     767 00000212 00020003  ||$C$CON5||:    .field  458754,32
+         00000216 00000007 
+     768 00000218                   .sect   ".text"
+     769                            .clink
+     770                            .thumbfunc MotorSpeed
+     771 00000218                   .thumb
+     772                            .global MotorSpeed
+     773                    
+     774                    $C$DW$55        .dwtag  DW_TAG_subprogram, DW_AT_name("MotorSpeed")
+     775                            .dwattr $C$DW$55, DW_AT_low_pc(MotorSpeed)
+     776                            .dwattr $C$DW$55, DW_AT_high_pc(0x00)
+     777                            .dwattr $C$DW$55, DW_AT_TI_symbol_name("MotorSpeed")
+     778                            .dwattr $C$DW$55, DW_AT_external
+     779                            .dwattr $C$DW$55, DW_AT_TI_begin_file("../Drivers/motor.c")
+     780                            .dwattr $C$DW$55, DW_AT_TI_begin_line(0x128)
+     781                            .dwattr $C$DW$55, DW_AT_TI_begin_column(0x01)
+     782                            .dwattr $C$DW$55, DW_AT_decl_file("../Drivers/motor.c")
+     783                            .dwattr $C$DW$55, DW_AT_decl_line(0x128)
+     784                            .dwattr $C$DW$55, DW_AT_decl_column(0x01)
+     785                            .dwattr $C$DW$55, DW_AT_TI_max_frame_size(0x10)
+     786                            .dwpsn  file "../Drivers/motor.c",line 297,column 1,is_stmt,address MotorSpeed,isa 1
+     787                    
+     788                            .dwfde $C$DW$CIE, MotorSpeed
+     789                    $C$DW$56        .dwtag  DW_TAG_formal_parameter, DW_AT_name("ucMotor")
+     790                            .dwattr $C$DW$56, DW_AT_TI_symbol_name("ucMotor")
+     791                            .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$20)
+     792                            .dwattr $C$DW$56, DW_AT_location[DW_OP_reg0]
+     793                    $C$DW$57        .dwtag  DW_TAG_formal_parameter, DW_AT_name("usPercent")
+     794                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("usPercent")
+     795                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$9)
+     796                            .dwattr $C$DW$57, DW_AT_location[DW_OP_reg1]
+     797                    
+     798                    ;*****************************************************************************
+     799                    ;* FUNCTION NAME: MotorSpeed                                                 *
+     800                    ;*                                                                           *
+     801                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     802                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     803                    ;*   Local Frame Size  : 0 Args + 12 Auto + 4 Save = 16 byte                 *
+     804                    ;*****************************************************************************
+     805 00000218           MotorSpeed:
+     806                    ;* --------------------------------------------------------------------------*
+     807                            .dwcfi  cfa_offset, 0
+     808 00000218 B50E              PUSH      {A2, A3, A4, LR}      ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     809                            .dwcfi  cfa_offset, 4
+     810                            .dwcfi  save_reg_to_mem, 14, -4
+     811                            .dwcfi  cfa_offset, 8
+     812                            .dwcfi  save_reg_to_mem, 3, -8
+     813                            .dwcfi  cfa_offset, 12
+     814                            .dwcfi  save_reg_to_mem, 2, -12
+     815                            .dwcfi  cfa_offset, 16
+     816                            .dwcfi  save_reg_to_mem, 1, -16
+     817                            .dwcfi  cfa_offset, 16
+     818                    $C$DW$58        .dwtag  DW_TAG_variable, DW_AT_name("ucMotor")
+     819                            .dwattr $C$DW$58, DW_AT_TI_symbol_name("ucMotor")
+     820                            .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$20)
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   16
+
+     821                            .dwattr $C$DW$58, DW_AT_location[DW_OP_breg13 0]
+     822                    $C$DW$59        .dwtag  DW_TAG_variable, DW_AT_name("usPercent")
+     823                            .dwattr $C$DW$59, DW_AT_TI_symbol_name("usPercent")
+     824                            .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$9)
+     825                            .dwattr $C$DW$59, DW_AT_location[DW_OP_breg13 2]
+     826                    $C$DW$60        .dwtag  DW_TAG_variable, DW_AT_name("ulPWMOut")
+     827                            .dwattr $C$DW$60, DW_AT_TI_symbol_name("ulPWMOut")
+     828                            .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$13)
+     829                            .dwattr $C$DW$60, DW_AT_location[DW_OP_breg13 4]
+     830                    $C$DW$61        .dwtag  DW_TAG_variable, DW_AT_name("ulPWMOutBit")
+     831                            .dwattr $C$DW$61, DW_AT_TI_symbol_name("ulPWMOutBit")
+     832                            .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$13)
+     833                            .dwattr $C$DW$61, DW_AT_location[DW_OP_breg13 8]
+     834 0000021a 1002F8AD          STRH      A2, [SP, #2]          ; [DPU_3_PIPE] |297|  ; [KEEP 32-BIT INS]
+     835 0000021e 0000F88D          STRB      A1, [SP, #0]          ; [DPU_3_PIPE] |297|  ; [KEEP 32-BIT INS]
+     836                            .dwpsn  file "../Drivers/motor.c",line 309,column 5,is_stmt,isa 1
+     837 00000222 0000F89D          LDRB      A1, [SP, #0]          ; [DPU_3_PIPE] |309|  ; [KEEP 32-BIT INS]
+     838 00000226 B920              CBNZ      A1, ||$C$L9||         ; []  ; [ORIG 16-BIT INS]
+     839                            ; BRANCHCC OCCURS {||$C$L9||}    ; [] |309| 
+     840                    ;* --------------------------------------------------------------------------*
+     841                            .dwpsn  file "../Drivers/motor.c",line 311,column 9,is_stmt,isa 1
+     842 00000228 2082              MOVS      A1, #130              ; [DPU_3_PIPE] |311|  ; [ORIG 16-BIT INS]
+     843 0000022a 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |311|  ; [ORIG 16-BIT INS]
+     844                            .dwpsn  file "../Drivers/motor.c",line 312,column 9,is_stmt,isa 1
+     845 0000022c 2004              MOVS      A1, #4                ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     846 0000022e 9002              STR       A1, [SP, #8]          ; [DPU_3_PIPE] |312|  ; [ORIG 16-BIT INS]
+     847                            .dwpsn  file "../Drivers/motor.c",line 313,column 5,is_stmt,isa 1
+     848 00000230 E003              B         ||$C$L10||            ; [DPU_3_PIPE] |313|  ; [ORIG 16-BIT INS]
+     849                            ; BRANCH OCCURS {||$C$L10||}     ; [] |313| 
+     850                    ;* --------------------------------------------------------------------------*
+     851 00000232           ||$C$L9||:    
+     852                            .dwpsn  file "../Drivers/motor.c",line 316,column 9,is_stmt,isa 1
+     853 00000232 2040              MOVS      A1, #64               ; [DPU_3_PIPE] |316|  ; [ORIG 16-BIT INS]
+     854 00000234 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |316|  ; [ORIG 16-BIT INS]
+     855                            .dwpsn  file "../Drivers/motor.c",line 317,column 9,is_stmt,isa 1
+     856 00000236 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |317|  ; [ORIG 16-BIT INS]
+     857 00000238 9002              STR       A1, [SP, #8]          ; [DPU_3_PIPE] |317|  ; [ORIG 16-BIT INS]
+     858                    ;* --------------------------------------------------------------------------*
+     859 0000023a           ||$C$L10||:    
+     860                            .dwpsn  file "../Drivers/motor.c",line 324,column 5,is_stmt,isa 1
+     861 0000023a 480D              LDR       A1, $C$CON6           ; [] |324|  ; [ORIG 16-BIT INS]
+     862 0000023c 6800              LDR       A1, [A1, #0]          ; [] |324|  ; [ORIG 16-BIT INS]
+     863 0000023e 9902              LDR       A2, [SP, #8]          ; [] |324|  ; [ORIG 16-BIT INS]
+     864 00000240 6AC3              LDR       A4, [A1, #44]         ; [] |324|  ; [ORIG 16-BIT INS]
+     865 00000242 480C              LDR       A1, $C$CON7           ; [] |324|  ; [ORIG 16-BIT INS]
+     866 00000244 2201              MOVS      A3, #1                ; [] |324|  ; [ORIG 16-BIT INS]
+     867                    $C$DW$62        .dwtag  DW_TAG_TI_branch
+     868                            .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+     869                            .dwattr $C$DW$62, DW_AT_TI_call
+     870                            .dwattr $C$DW$62, DW_AT_TI_indirect
+     871 00000246 4798              BLX       A4                    ; [] |324|  ; [ORIG 16-BIT INS]
+     872                            ; CALL OCCURS {}                 ; [] |324| 
+     873                            .dwpsn  file "../Drivers/motor.c",line 329,column 5,is_stmt,isa 1
+     874 00000248 4809              LDR       A1, $C$CON6           ; [] |329|  ; [ORIG 16-BIT INS]
+     875 0000024a 6800              LDR       A1, [A1, #0]          ; [] |329|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   17
+
+     876 0000024c 9902              LDR       A2, [SP, #8]          ; [] |329|  ; [ORIG 16-BIT INS]
+     877 0000024e 6B03              LDR       A4, [A1, #48]         ; [] |329|  ; [ORIG 16-BIT INS]
+     878 00000250 4808              LDR       A1, $C$CON7           ; [] |329|  ; [ORIG 16-BIT INS]
+     879 00000252 2200              MOVS      A3, #0                ; [] |329|  ; [ORIG 16-BIT INS]
+     880                    $C$DW$63        .dwtag  DW_TAG_TI_branch
+     881                            .dwattr $C$DW$63, DW_AT_low_pc(0x00)
+     882                            .dwattr $C$DW$63, DW_AT_TI_call
+     883                            .dwattr $C$DW$63, DW_AT_TI_indirect
+     884 00000254 4798              BLX       A4                    ; [] |329|  ; [ORIG 16-BIT INS]
+     885                            ; CALL OCCURS {}                 ; [] |329| 
+     886                            .dwpsn  file "../Drivers/motor.c",line 335,column 5,is_stmt,isa 1
+     887 00000256 4811              LDR       A1, $C$CON11          ; [] |335|  ; [ORIG 16-BIT INS]
+     888 00000258 6800              LDR       A1, [A1, #0]          ; [] |335|  ; [ORIG 16-BIT INS]
+     889 0000025a 6E00              LDR       A1, [A1, #96]         ; [] |335|  ; [ORIG 16-BIT INS]
+     890                    $C$DW$64        .dwtag  DW_TAG_TI_branch
+     891                            .dwattr $C$DW$64, DW_AT_low_pc(0x00)
+     892                            .dwattr $C$DW$64, DW_AT_TI_call
+     893                            .dwattr $C$DW$64, DW_AT_TI_indirect
+     894 0000025c 4780              BLX       A1                    ; [] |335|  ; [ORIG 16-BIT INS]
+     895                            ; CALL OCCURS {}                 ; [] |335| 
+     896 0000025e 517AF44F          MOV       A2, #16000            ; [] |335|  ; [KEEP 32-BIT INS]
+     897 00000262 F1F1FBB0          UDIV      A2, A1, A2            ; [] |335|  ; [KEEP 32-BIT INS]
+     898 00000266 0002F8BD          LDRH      A1, [SP, #2]          ; [] |335|  ; [KEEP 32-BIT INS]
+     899 0000026a 4348              MULS      A1, A1, A2            ; [] |335|  ; [ORIG 16-BIT INS]
+     900 0000026c E004              B         ||$C$L11||            ; []  ; [ORIG 16-BIT INS]
+     901                            ; BRANCH OCCURS {||$C$L11||}     ; [] 
+     902                    ;******************************************************************************
+     903                    ;* CONSTANT TABLE                                                             *
+     904                    ;******************************************************************************
+     905 0000026e                   .sect   ".text"
+     906                            .align  4
+     907 0000026e 003046C0  ||$C$CON6||:    .field  16777264,32
+         00000272 00000100 
+     908                            .align  4
+     909 00000272 80000100  ||$C$CON7||:    .field  1073905664,32
+         00000276 00004002 
+     910                    ;* --------------------------------------------------------------------------*
+     911 00000278           ||$C$L11||:    
+     912 00000278 41C8F44F          MOV       A2, #25600            ; [] |335|  ; [KEEP 32-BIT INS]
+     913 0000027c F2F1FBB0          UDIV      A3, A1, A2            ; [] |335|  ; [KEEP 32-BIT INS]
+     914 00000280 4807              LDR       A1, $C$CON12          ; [] |335|  ; [ORIG 16-BIT INS]
+     915 00000282 6800              LDR       A1, [A1, #0]          ; [] |335|  ; [ORIG 16-BIT INS]
+     916 00000284 9901              LDR       A2, [SP, #4]          ; [] |335|  ; [ORIG 16-BIT INS]
+     917 00000286 6803              LDR       A4, [A1, #0]          ; [] |335|  ; [ORIG 16-BIT INS]
+     918 00000288 4806              LDR       A1, $C$CON13          ; [] |335|  ; [ORIG 16-BIT INS]
+     919                    $C$DW$65        .dwtag  DW_TAG_TI_branch
+     920                            .dwattr $C$DW$65, DW_AT_low_pc(0x00)
+     921                            .dwattr $C$DW$65, DW_AT_TI_call
+     922                            .dwattr $C$DW$65, DW_AT_TI_indirect
+     923 0000028a 4798              BLX       A4                    ; [] |335|  ; [ORIG 16-BIT INS]
+     924                            ; CALL OCCURS {}                 ; [] |335| 
+     925                            .dwpsn  file "../Drivers/motor.c",line 337,column 1,is_stmt,isa 1
+     926                            .dwcfi  cfa_offset, 16
+     927                    $C$DW$66        .dwtag  DW_TAG_TI_branch
+     928                            .dwattr $C$DW$66, DW_AT_low_pc(0x00)
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   18
+
+     929                            .dwattr $C$DW$66, DW_AT_TI_return
+     930 0000028c BD0E              POP       {A2, A3, A4, PC}      ; []  ; [ORIG 16-BIT INS]
+     931                            ; BRANCH OCCURS                  ; [] 
+     932                            .dwattr $C$DW$55, DW_AT_TI_end_file("../Drivers/motor.c")
+     933                            .dwattr $C$DW$55, DW_AT_TI_end_line(0x151)
+     934                            .dwattr $C$DW$55, DW_AT_TI_end_column(0x01)
+     935                            .dwendentry
+     936                            .dwendtag $C$DW$55
+     937                    
+     938                    ;******************************************************************************
+     939                    ;* CONSTANT TABLE                                                             *
+     940                    ;******************************************************************************
+     941 0000028e                   .sect   ".text"
+     942                            .align  4
+     943 0000028e 002046C0  ||$C$CON8||:    .field  16777248,32
+         00000292 00000100 
+     944                            .align  4
+     945 00000292 70000100  ||$C$CON9||:    .field  1073770496,32
+         00000296 00004000 
+     946                            .align  4
+     947 00000296 70004000  ||$C$CON10||:   .field  1073901568,32
+         0000029a 00004002 
+     948                            .align  4
+     949 0000029a 00444002  ||$C$CON11||:   .field  16777284,32
+         0000029e 00000100 
+     950                            .align  4
+     951 0000029e 00300100  ||$C$CON12||:   .field  16777264,32
+         000002a2 00000100 
+     952                            .align  4
+     953 000002a2 80000100  ||$C$CON13||:   .field  1073905664,32
+         000002a6 00004002 
+     954                    ;*****************************************************************************
+     955                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     956                    ;*****************************************************************************
+     957                            .global GPIOPinConfigure
+     958                    
+     959                    ;******************************************************************************
+     960                    ;* BUILD ATTRIBUTES                                                           *
+     961                    ;******************************************************************************
+     962                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     963                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     964                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     965                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     966                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     967                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(1)
+     968                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+     969                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     970                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     971                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     972                    
+     973                    ;******************************************************************************
+     974                    ;* TYPE INFORMATION                                                           *
+     975                    ;******************************************************************************
+     976                    
+     977                    $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   19
+
+     978                            .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+     979                    $C$DW$67        .dwtag  DW_TAG_enumerator, DW_AT_name("LEFT_SIDE"), DW_AT_const_value(0x00)
+     980                            .dwattr $C$DW$67, DW_AT_decl_file("..\Drivers\motor.h")
+     981                            .dwattr $C$DW$67, DW_AT_decl_line(0x4b)
+     982                            .dwattr $C$DW$67, DW_AT_decl_column(0x05)
+     983                    $C$DW$68        .dwtag  DW_TAG_enumerator, DW_AT_name("RIGHT_SIDE"), DW_AT_const_value(0x01)
+     984                            .dwattr $C$DW$68, DW_AT_decl_file("..\Drivers\motor.h")
+     985                            .dwattr $C$DW$68, DW_AT_decl_line(0x50)
+     986                            .dwattr $C$DW$68, DW_AT_decl_column(0x05)
+     987                            .dwendtag $C$DW$T$19
+     988                    
+     989                            .dwattr $C$DW$T$19, DW_AT_decl_file("..\Drivers\motor.h")
+     990                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x47)
+     991                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+     992                    $C$DW$T$20      .dwtag  DW_TAG_typedef, DW_AT_name("tSide")
+     993                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     994                            .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     995                            .dwattr $C$DW$T$20, DW_AT_decl_file("..\Drivers\motor.h")
+     996                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x51)
+     997                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x03)
+     998                    
+     999                    $C$DW$T$21      .dwtag  DW_TAG_enumeration_type
+    1000                            .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1001                    $C$DW$69        .dwtag  DW_TAG_enumerator, DW_AT_name("FORWARD"), DW_AT_const_value(0x00)
+    1002                            .dwattr $C$DW$69, DW_AT_decl_file("..\Drivers\motor.h")
+    1003                            .dwattr $C$DW$69, DW_AT_decl_line(0x38)
+    1004                            .dwattr $C$DW$69, DW_AT_decl_column(0x05)
+    1005                    $C$DW$70        .dwtag  DW_TAG_enumerator, DW_AT_name("REVERSE"), DW_AT_const_value(0x01)
+    1006                            .dwattr $C$DW$70, DW_AT_decl_file("..\Drivers\motor.h")
+    1007                            .dwattr $C$DW$70, DW_AT_decl_line(0x3d)
+    1008                            .dwattr $C$DW$70, DW_AT_decl_column(0x05)
+    1009                            .dwendtag $C$DW$T$21
+    1010                    
+    1011                            .dwattr $C$DW$T$21, DW_AT_decl_file("..\Drivers\motor.h")
+    1012                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x34)
+    1013                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x01)
+    1014                    $C$DW$T$22      .dwtag  DW_TAG_typedef, DW_AT_name("tDirection")
+    1015                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1016                            .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+    1017                            .dwattr $C$DW$T$22, DW_AT_decl_file("..\Drivers\motor.h")
+    1018                            .dwattr $C$DW$T$22, DW_AT_decl_line(0x3f)
+    1019                            .dwattr $C$DW$T$22, DW_AT_decl_column(0x01)
+    1020                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1021                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1022                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1023                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1024                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1025                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1026                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1027                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1028                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1029                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1030                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1031                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1032                    $C$DW$T$31      .dwtag  DW_TAG_typedef, DW_AT_name("tBoolean")
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   20
+
+    1033                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$6)
+    1034                            .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+    1035                            .dwattr $C$DW$T$31, DW_AT_decl_file("C:/TI_CodeComposer/Stellaris-EVALBOT/inc/hw_types.h")
+    1036                            .dwattr $C$DW$T$31, DW_AT_decl_line(0x30)
+    1037                            .dwattr $C$DW$T$31, DW_AT_decl_column(0x17)
+    1038                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1039                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1040                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1041                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1042                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1043                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1044                            .dwattr $C$DW$T$8, DW_AT_name("short")
+    1045                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+    1046                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1047                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1048                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1049                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+    1050                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1051                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1052                            .dwattr $C$DW$T$10, DW_AT_name("int")
+    1053                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+    1054                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1055                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1056                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1057                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+    1058                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1059                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1060                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1061                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1062                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1063                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1064                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1065                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1066                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1067                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1068                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1069                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1070                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1071                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1072                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1073                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1074                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1075                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1076                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1077                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1078                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1079                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1080                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1081                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1082                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1083                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1084                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1085                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1086                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1087                    
+TI ARM Assembler PC v5.0.4 Thu Dec 12 08:23:15 2013
+
+Tools Copyright (c) 1996-2013 Texas Instruments Incorporated
+motor.asm                                                            PAGE   21
+
+    1088                    ;***************************************************************
+    1089                    ;* DWARF CIE ENTRIES                                           *
+    1090                    ;***************************************************************
+    1091                    
+    1092                    $C$DW$CIE       .dwcie 14
+    1093                            .dwcfi  cfa_register, 13
+    1094                            .dwcfi  cfa_offset, 0
+    1095                            .dwcfi  undefined, 0
+    1096                            .dwcfi  undefined, 1
+    1097                            .dwcfi  undefined, 2
+    1098                            .dwcfi  undefined, 3
+    1099                            .dwcfi  same_value, 4
+    1100                            .dwcfi  same_value, 5
+    1101                            .dwcfi  same_value, 6
+    1102                            .dwcfi  same_value, 7
+    1103                            .dwcfi  same_value, 8
+    1104                            .dwcfi  same_value, 9
+    1105                            .dwcfi  same_value, 10
+    1106                            .dwcfi  same_value, 11
+    1107                            .dwcfi  undefined, 12
+    1108                            .dwcfi  undefined, 13
+    1109                            .dwcfi  undefined, 14
+    1110                            .dwcfi  undefined, 14
+    1111                            .dwcfi  undefined, 7
+    1112                            .dwendentry
+    1113                            .dwendtag $C$DW$CU
+    1114                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 277 (92%)
+Number of Thumb2 ins encoded as Thumb2 = 24 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 93
+
+
+No Assembly Errors, No Assembly Warnings
